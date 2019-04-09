@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+nav {
+	height: 88px;
+	width: 100%;
+	background-color: #000000;
+}
+
+nav .left {
+	float: left;
+}
+
+nav .logo {
+	font-family: KaiTi;
+	font-size: 25px;
+	color: #FFFFFF;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+
+nav .type {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-left: 180px
+}
+
+nav .right {
+	float: right;
+}
+
+nav ul {
+	color: #FFFFFF;
+	list-style: none;
+	margin-top: 15px;
+	margin-right: 80px;
+	font-size: 15px;
+}
+
+nav ul li {
+	line-height: 20px;
+	margin-left: 60px;
+	float: right;
+}
+
+nav .user {
+	color: #FFFFFF;
+	height: 35px;
+	width: 120px;
+	background-color: #666;
+	margin-right: 70px;
+	margin-top: 10px;
+	padding: 0px 10px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border: 2px solid #FF9000;
+	float: right;
+}
+
+.user .icon {
+	line-height: 30px;
+	margin-right: 5px;
+	float: left;
+}
+
+.user .username {
+	line-height: 30px;
+	font-size: 14px;
+	float: left;
+}
+
+.user .exit {
+	font-size: 14px;
+	line-height: 30px;
+	float: right;
+}
+
+.user .exit a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.user .exit a:hover {
+	color: #E7EFE2;
+}

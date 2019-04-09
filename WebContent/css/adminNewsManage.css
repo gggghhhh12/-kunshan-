@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+nav {
+	height: 35px;
+	background-color: #FFDCA9;
+	font-size: 13px;
+	line-height: 35px;
+	padding-left: 20px;
+	border: 1px solid #EB5409;
+}
+
+.tool {
+	height: 40px;
+	padding: 20px;
+}
+
+.tool ul li {
+	list-style: none;
+	margin-right: 10px;
+	float: left;
+}
+
+.tool ul li input[type="button"] {
+	height: 35px;
+	width: 100px;
+	background-color: #FFDCA9;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #D7A372;
+}
+
+.tablelist table {
+	background-color: #FFDCA9;
+	margin-left: 20px;
+	border: 1px solid #D7A372;
+	line-height: 30px;
+}
+.tablelist tr {
+	border-bottom: 1px solid #D7A372;
+}
+.tablelist th{
+	text-align: center;
+	font-size: 13px;
+}
+
+.tablelist td {
+	text-align: center;
+	font-size: 13px;
+}
+
+.tablelist a {
+	font-size: 13px;
+	color: #EB5409;
+	margin-right: 5px;
+}
+
+
+
+
+
+.tablelist2 table {
+	background-color: #FFDCA9;
+	margin-left: 20px;
+	border: 1px solid #D7A372;
+	line-height: 30px;
+}
+.tablelist2 tr {
+	border-bottom: 1px solid #D7A372;
+}
+.tablelist2 th{
+	text-align: center;
+	font-size: 13px;
+}
+
+.tablelist2 td {
+	text-align: center;
+	font-size: 13px;
+}
+
+.tablelist2 a {
+	font-size: 13px;
+	color: #EB5409;
+	margin-right: 5px;
+}
+
+
+.mask, .mask1 {
+	width: 400px;
+	font-size: 14px;
+	background-color: #EB5409;
+	padding: 20px;
+	position: fixed;
+	top: 150px;
+	left: 480px;
+	display: none;
+}
+
+.mask dl, .mask1 dl {
+	margin-bottom: 10px;
+}
+
+.mask dl dt, .mask1 dl dt {
+	margin-right: 10px;
+	line-height: 30px;
+	float: left;
+}
+
+.mask .yes, .mask1 .yes {
+	height: 35px;
+	width: 100px;
+	background-color: #FFDCA9;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #D7A372;
+	margin-left: 100px;
+	margin-right: 30px;
+	float: left;
+}
+
+.mask .no, .mask1 .no {
+	height: 35px;
+	width: 100px;
+	background-color: #FFDCA9;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #D7A372;
+}
+
+#pie {
+	width: 800px;
+	height: 600px;
+	margin: 30px 300px;
+}

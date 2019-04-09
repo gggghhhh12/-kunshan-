@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+#mainbody {
+	width: 100%;
+	height: 700px;
+	margin: 0 auto;
+	padding: 30px;
+	border: 1px solid #000;
+}
+
+#mainbody h2 {
+	margin-bottom: 10px;
+}
+
+.mymessage {
+	padding: 10px;
+	color: #666;
+}
+
+.mymessage span {
+	font-size: 15px;
+	margin-top: 15px;
+}
+
+.mymessage .t1 {
+	display: inline-block;
+	width: 460px;
+}
+
+.mymessage .t2 {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+}
+
+.t1 a {
+	text-decoration: none;
+	color: #666;
+}
+
+.t1 a:hover {
+	color: #551A8B;
+}
+
+.t2 a {text-decorationnone;
+	color: #FF4E00;
+}
+
+.t2 a:hover {
+	color: #B9592F;
+}

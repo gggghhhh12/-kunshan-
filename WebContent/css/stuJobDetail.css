@@ -1,0 +1,310 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #F3F5F8;
+}
+
+#mainbody {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#mainbody .leftInfo {
+	width: 230px;
+	padding-top: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+#mainbody .rightInfo {
+	width: 630px;
+	background-color: #FFFFFF;
+	padding: 40px 20px;
+	float: right;
+}
+
+.epInfo {
+	margin-bottom: 50px;
+}
+
+.epInfo .info {
+	margin-bottom: 30px;
+}
+
+.epInfo .info p {
+	margin: 10px 0px;
+	color: #999;
+	font-family: verdana;
+}
+
+.operation input[type="button"] {
+	background-color: #E64;
+	text-align: center;
+	width: 160px;
+	height: 40px;
+	font-size: 18px;
+	color: #FFFFFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 0px;
+}
+
+.operation {
+	margin-top: 50px;
+}
+
+.operation .store {
+	font-family: verdana;
+	color: #86B3CC;
+	font-size: 14px;
+}
+
+.operation .store a {
+	text-decoration: none;
+}
+
+.operation .store a:hover {
+	color: #E64;
+}
+
+.epInfo .callback {
+	color: #999;
+	font-size: 13px;
+	text-align: left;
+	margin-top: 5px;
+}
+
+.title {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.title .jobname {
+	float: left;
+}
+
+.title .report {
+	color: #bbb;
+	font-size: 14px;
+	line-height: 38px;
+	margin-left: 10px;
+	float: left;
+}
+
+.title .msg {
+	color: #bbb;
+	font-size: 13px;
+	line-height: 38px;
+	margin-left: 10px;
+	float: left;
+}
+
+.title .report:hover {
+	color: #E64;
+}
+
+.title .salary {
+	color: #E64;
+	float: right;
+}
+
+.detail {
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.detail .epname {
+	color: #7AB1CC;
+	font-size: 13px;
+	float: left;
+}
+
+.detail .postdate {
+	font-size: 13px;
+	float: right;
+}
+
+.benefits, .diploma, .reqnum, .engreq {
+	margin: 20px 0px;
+}
+
+.t1 {
+	font-weight: bold;
+	color: #bbb;
+	margin-right: 20px;
+}
+
+.t2 {
+	color: #666;
+	background-color: #F1F3F7;
+	padding: 5px;
+}
+
+dl {
+	margin: 10px 0px;
+}
+
+dl dt {
+	font-weight: bold;
+	color: #bbb;
+	margin: 5px 0px;
+}
+
+.rightInfo .epinfo {
+	margin: 10px 0px;
+}
+
+.leftInfo .recommend {
+	margin-top: 30px;
+	overflow: hidden;
+}
+
+.recommend h4 {
+	float: left;
+}
+
+.recommend .change {
+	font-size: 13px;
+	text-decoration: underline;
+	color: #E64;
+	float: right;
+}
+
+.recommend .recdContent {
+	margin: 40px 0px;
+}
+
+.recdContent .s1 {
+	display: inline-block;
+	font-size: 14px;
+	width: 130px;
+	text-align: left;
+	color: #5C44EE;
+	font-weight: bold;
+	margin: 8px 0px;
+}
+
+.recdContent .s1 a {
+	text-decoration: none;
+}
+
+.recdContent .s1 a:hover {
+	color: #22AABB;
+}
+
+.recdContent .s2 {
+	display: inline-block;
+	font-size: 13px;
+	width: 90px;
+	text-align: right;
+	color: #666;
+}
+
+.recdContent .s3 {
+	display: inline-block;
+	width: 130px;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 5px;
+}
+
+.recdContent .s4 {
+	display: inline-block;
+	font-size: 13px;
+	width: 90px;
+	color: #666;
+	margin-bottom: 5px;
+	text-align: right;
+}
+
+.comment h2 {
+	float: left;
+	margin-right: 30px;
+}
+
+.comment #btnComment {
+	height: 30px;
+	width: 80px;
+	background-color: #E64;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 0px;
+	margin-bottom: 10px;
+}
+
+.comment .content {
+	width: 600px;
+	margin-top: 20px;
+	font-size: 13px;
+	color: #666;
+	display: none;
+}
+
+.comment .content h4 {
+	font-size: 15px;
+	color: #000;
+}
+
+.comment .content textarea {
+	height: 100px;
+	width: 600px;
+	border: 2px solid #666;
+	margin-top: 10px;
+}
+
+.comment .content #btnConfirm {
+	height: 30px;
+	width: 80px;
+	background-color: #E64;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 0px;
+	margin-bottom: 10px;
+	margin-right: 30px;
+	float: left;
+}
+
+.comment .content #btnCancel {
+	height: 30px;
+	width: 80px;
+	background-color: #E64;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 0px;
+	margin-bottom: 10px;
+}
+
+.comment .list {
+	margin-top: 20px;
+}
+
+.comment .list .s1 {
+	display: inline-block;
+	width: 400px;
+	font-size: 14px;
+	color: #666;
+	margin: 5px 0px;
+}
+
+.comment .list .s2 {
+	display: inline-block;
+	width: 200px;
+	font-size: 14px;
+	color: #666;
+	margin: 5px 0px;
+}
+
+.comment .list .single .time {
+	margin: 5px 0px;
+	color: #666;
+}

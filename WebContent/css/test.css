@@ -1,0 +1,277 @@
+@CHARSET "UTF-8";
+.melon{
+	overflow:hidden
+}
+.dorp {
+	float: left;
+}
+
+.left_list {
+	width: 430px; //
+	height: 600px; //
+	background-color: green;
+}
+
+.left_jishu {
+	z-index:9999;
+	width: 430px;
+	display: inline-block;
+	padding-left: 15px;
+	margin: 0;
+	font-size: 18px;
+	font-weight: 500; //
+	border: 1px solid #555;
+}
+
+.dorp_con {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	background-color: #fff;
+	min-width: 180px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 12px 16px;
+	margin-top:-1px;
+	margin-left: 414px;
+}
+
+.shade{
+	display: none;
+	position: absolute;
+	width:30px;
+	height:42px;
+	margin-left:400px;
+	z-index:1500;
+	background-color: #fff;
+}
+
+.shade1{
+	display: none;
+	position: absolute;
+	width:30px;
+	height:42px;
+	margin-left:400px;
+	z-index:9999;
+	background-color: #fff;
+}
+
+.shade2{
+	display: none;
+	position: absolute;
+	width:30px;
+	height:42px;
+	margin-left:400px;
+	z-index:9999;
+	background-color: #fff;
+}
+
+
+.jishumenu1 {
+	width: 60px;
+	background-color: #fff;
+	font-size: 18px;
+	float: left； text-align:center;
+	line-height: 42px;
+}
+
+
+.dorp_con2 {
+	display: none;
+	position: absolute;
+	z-index: 9998; background-color : #fff;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 12px 16px;
+	margin-left: 414px;
+	margin-top:-1px;
+	background-color: #fff;
+}
+
+.dorp_con3 {
+	display: none;
+	position: absolute;
+	z-index: 9998; background-color : #fff;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 12px 16px;
+	margin-top:-1px;
+	margin-left: 414px;
+	background-color: #fff;
+}
+
+.left_jishu:hover .dorp_con {
+	display: block;
+}
+
+.left_chanpin:hover .dorp_con2 {
+	display: block;
+}
+
+.left_sheji:hover .dorp_con3 {
+	display: block;
+}
+
+.left_jishu:hover .shade {
+	display: block;
+}
+
+.left_chanpin:hover .shade1 {
+	display: block;
+}
+
+.left_sheji:hover .shade2 {
+	display: block;
+}
+
+.left_jishu:hover{width:500px;border:1px solid #c0c0c0;}
+
+.left_jishu:hover .dorp_con{border:1px solid #c0c0c0;}
+
+.jishumenu {
+	width: 60px;
+	background-color: #fff;
+	font-size: 18px;
+	float: left； text-align:center;
+	line-height: 42px;
+}
+
+.left_chanpin {
+	z-index:9999;
+	width: 430px;
+	padding-left: 15px;
+	margin-top: 0px;
+	font-size: 18px;
+	font-weight: 500; //
+	border: 1px solid #555;
+}
+
+.left_chanpin:hover{ width:500px;border:1px solid #c0c0c0;}
+.left_chanpin:hover .dorp_con2{ border:1px solid #c0c0c0;}
+
+.left_sheji {
+	z-index:9999;
+	width: 500px;
+	padding-left: 15px; //
+	margin-top: 50px;
+	font-size: 18px;
+	font-weight: 500; //
+	border: 1px solid #555;
+}
+
+.left_sheji:hover{width:500px;border:1px solid #c0c0c0;}
+.left_sheji:hover .dorp_con3{border:1px solid #c0c0c0;}
+
+.dorp {
+	display: inline;
+	z-index: 9999;
+}
+
+<
+style>* {
+	margin: 0;
+	padding: 0
+}
+
+.box {
+	width: 500px;
+	height: 300px;
+	border: 1px solid #ccc;
+	margin: 100px auto;
+	padding: 5px;
+}
+ ol .current {
+	background-color: red;
+}
+
+{
+padding:0px;
+margin:0px;
+list-style:none;
+}
+
+.banner {
+	width: 768px;
+	height: 240px;
+	margin: 0px;
+	border: 1px solid #808080;
+	position: relative;
+	overflow: hidden;
+}
+
+.banner .img {
+	width: 5000px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.banner .img img {
+	width: 768px;
+	height: 240px;
+}
+
+.banner .img li {
+	float: left;
+}
+
+.banner .num {
+	position: absolute;
+	width: 100%;
+	bottom: 10px;
+	left: 0px;
+	text-align: center;
+	font-size: 0px;
+}
+
+
+
+.banner .num li {
+	width: 10px;
+	height: 10px;
+	background-color: #888;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 1% 3px;
+	cursor: pointer;
+}
+
+.banner .num li.on {
+	background-color: #ff6a00;
+}
+
+.banner .btn {
+	width: 30px;
+	height: 50px;
+	background-color: #808080;
+	opacity: 0.5;
+	filter: alpha(opacity : 0.5);
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 50px;
+	font-size: 40px;
+	color: #fff;
+	font-family: "宋体";
+	display: none;
+}
+
+.banner .btn_l {
+	left: 0px;
+}
+
+.banner .btn_r {
+	right: 0px;
+}
+
+.banner:hover .btn {
+	display: block;
+}
+
+.melon{
+	height:60%;
+	margin:0 auto;
+}
+
+

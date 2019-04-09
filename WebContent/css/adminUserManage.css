@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+nav {
+	height: 35px;
+	background-color: #FFDCA9;
+	font-size: 13px;
+	line-height: 35px;
+	padding-left: 20px;
+	border: 1px solid #EB5409;
+}
+
+.modify {
+	height: 300px;
+	width: 500px;
+	position: absolute;
+	left: 33%;
+	top: 20%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	background-color: #FFDCA9;
+}
+
+.modify table {
+	margin-left: 35px;
+	margin-top: 35px;
+}
+
+.modify .sure {
+	margin-left: 185px;
+	margin-top: 30px;
+}
+
+.modify input[type="text"], .modify input[type="password"] {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #000000;
+}
+
+.modify input[type="submit"] {
+	height: 40px;
+	width: 120px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	background-color: #EB5409;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.error {
+	font-size: 13px;
+	margin-left: 50px;
+	margin-top: 30px;
+	float: left;
+}

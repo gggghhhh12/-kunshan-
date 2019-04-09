@@ -1,0 +1,144 @@
+.job_tab,.company_tab{
+    margin-top: 52px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid dimgray;
+}
+.job_tab li,.company_tab li{
+    display: inline-block;
+    padding: 14px 0;
+    margin-right: 58px;
+    font-size: 16px;
+    color:darkgrey;
+}
+img{
+    border: 0;
+    vertical-align: top;
+    display: inline-block;
+}
+.position_list_ul,.company_list_ul{
+    width:1216px;
+    list-style-type: none;
+}
+.position_list_li,.company_list_li{
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    width: 389px;
+    height: 250px;
+    margin: 16px 16px 0 0;
+    padding: 20px 18px 0;
+    border: 1px solid #EAEEED;
+    background-color: #fff;
+}
+.list_more{
+    display: inline-block;
+    width: 380px;
+    height: 42px;
+    line-height: 42px;
+    margin: 16px auto;
+    background: #FFF;
+    border: 1px solid #064152;
+    font-size: 16px;
+    color: #064152;
+    text-align: center;
+}
+.list_more_parent{
+    text-align: center;
+}
+.position_li_bottom{
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px dashed #E0E0E0;
+}
+.position_name{
+    height: 32px;
+    font-size: 23px;
+    max-width: 290px;
+    text-overflow: ellipsis;
+}
+.salary{
+    font-size: 16px;
+    color: #fa6041;
+    float:right;
+}
+.position_info{
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    color:#064152;
+}
+.labels{
+    margin-top: 5px;
+    margin-right: 20px;
+    height: 40px;
+    line-height: 30px;
+    overflow: hidden;
+
+}
+.wordCut{
+    width: 70px;
+    height: 36px;
+    padding: 0 5px;
+    font-size: 12px;
+    line-height: 36px;
+    color: #999;
+    border: 1px solid #F0F0F0;
+    border-radius: 3px;
+
+    text-align: center;
+}
+.bottom_right{
+    margin-left: 54px;
+    display: inline-block;
+}
+.company_name{
+    font-size: 15px;
+    font-family: "Bell MT";
+    color: #064152;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.company_wordcut{
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+li.company_list_li .top{
+    margin: 0 13px;
+    padding: 8px 0 14px;
+    text-align: center;
+    border-bottom: 1px dashed #E0E0E0;
+    position: relative;
+}
+.company_list_ul li.company_list_li .top p{
+    margin:0;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.company_list_ul li.company_list_li .top p span{
+    color:gray;
+    margin-top: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.company_list_ul li.company_list_li .top p.advantage{
+    margin-top: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.company_list_ul li.company_list_li .bottom p{
+    font-size: 12px;
+    text-align: center;
+    margin:3px;
+}
+.green{
+    color:#004098;
+}

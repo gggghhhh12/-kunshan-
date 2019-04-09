@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #F3F5F8;
+}
+
+#header {
+	height: 50px;
+	background-color: #000000;
+}
+
+#mainbody {
+	width: 960px;
+	margin: 0px auto;
+}
+
+#mainbody .leftInfo {
+	width: 260px;
+	height: 600px;
+	padding-top: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+#mainbody .rightInfo {
+	width: 620px;
+	background-color: #FFFFFF;
+	padding: 10px;
+	float: right;
+}
+
+.stuInfo h3 {
+	margin: 20px 0px;
+}
+
+.stuInfo span {
+	display: inline-block;
+	width: 100px;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.stuInfo p {
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.leftInfo .operation {
+	margin-top: 50px;
+}
+
+.operation input[type="button"] {
+	background-color: #E64;
+	text-align: center;
+	width: 160px;
+	height: 40px;
+	font-size: 18px;
+	color: #FFFFFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 0px;
+}
+
+.operation .store {
+	font-family: verdana;
+	color: #86B3CC;
+	font-size: 14px;
+}
+
+.operation .store a {
+	text-decoration: none;
+}
+
+.operation .store a:hover {
+	color: #E64;
+}
+
+.callback {
+	color: #999;
+	font-size: 13px;
+	text-align: left;
+	margin-top: 5px;
+}
+
+.rightInfo h3 {
+	margin: 20px 0px;
+}
+
+.rightInfo h4 {
+	margin: 15px 0px;
+}
+
+.rightInfo .basicInfo, .education, .jobIntention {
+	color: #666;
+	font-size: 15px;
+	margin: 15px 0px;
+}
+
+.basicInfo span {
+	display: inline-block;
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+.basicInfo p {
+	margin-bottom: 10px;
+}
+
+.education p {
+	margin-bottom: 10px;
+}
+
+.education dl {
+	margin-bottom: 10px;
+}
+
+.education dl dt {
+	margin: 5px 0px;
+}
+
+.jobIntention span {
+	display: inline-block;
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+.jobIntention p {
+	margin-bottom: 10px;
+}
+
+.jobIntention dl {
+	margin-bottom: 50px;
+}
+
+.jobIntention dl dt {
+	margin-bottom: 5px;
+}

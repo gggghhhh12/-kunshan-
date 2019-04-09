@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+nav {
+	height: 35px;
+	background-color: #FFDCA9;
+	font-size: 13px;
+	line-height: 35px;
+	padding-left: 20px;
+	border: 1px solid #EB5409;
+}

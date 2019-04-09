@@ -1,0 +1,235 @@
+@CHARSET "UTF-8";
+
+.title {
+	width: 100%;
+	height: 50px;
+	background-color: #FFF026;
+}
+
+.title h2 {
+	margin-left: 10px;
+	line-height: 50px;
+	text-align: left;
+	float: left;
+}
+
+.title .auth {
+	margin-left: 10px;
+	line-height: 50px;
+	font-weight: bold;
+	font-size: 22px;
+	color: #E22222;
+}
+
+.info {
+	background-color: #EDEEF0;
+	padding: 10px;
+}
+
+.basicinfo, .education, .jobintention {
+	background-color: #FFF9F3;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid hsla(13, 13%, 31%, 0.49);
+}
+
+h4 {
+	margin: 5px 0;
+}
+
+tr {
+	padding: 0px 5px;
+}
+
+td {
+	text-align: right;
+}
+
+dl {
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+
+dt {
+	display: inline-block;
+	width: 120px;
+	text-align: right;
+	margin-right: 8px;
+}
+
+.top {
+	vertical-align: top;
+}
+
+dd {
+	display: inline-block;
+}
+
+select {
+	width: 120px;
+	height: 35px;
+}
+
+.button input[type="submit"] {
+	background-color: #FF9000;
+	text-align: center;
+	width: 160px;
+	height: 40px;
+	font-size: 18px;
+	color: #FFFFFF;
+	margin: 40px 400px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 0px;
+}
+
+.button1 input[type="button"] {
+	background-color: #FF9000;
+	text-align: center;
+	width: 160px;
+	height: 40px;
+	font-size: 18px;
+	color: #FFFFFF;
+	margin: 40px 400px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 0px;
+}
+
+.button span {
+	display: inline-block;
+	width: 400px;
+	margin-top: 40px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.button span input[type="button"] {
+	background-color: #FF9000;
+	text-align: center;
+	width: 160px;
+	height: 40px;
+	font-size: 18px;
+	color: #FFFFFF;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 0px;
+}
+
+.callback {
+	font-size: 15px;
+	color: #666;
+	margin-left: 100px;
+}
+
+textarea {
+	vertical-align: top;
+}
+
+#mainbody {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.city, .trade {
+	width: 750px;
+	border: 3px solid #FF7400;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 130px;
+	left: 17%;
+	padding: 10px;
+	font-size: 13px;
+	display: none;
+}
+
+.city1 {
+	width: 750px;
+	border: 3px solid #FF7400;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 180px;
+	left: 17%;
+	padding: 10px;
+	font-size: 13px;
+	display: none;
+}
+
+.city2 {
+	width: 750px;
+	border: 3px solid #FF7400;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 1100px;
+	left: 17%;
+	padding: 10px;
+	font-size: 13px;
+	display: none;
+}
+
+.trade1 {
+	width: 750px;
+	border: 3px solid #FF7400;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 1080px;
+	left: 17%;
+	padding: 10px;
+	font-size: 13px;
+	display: none;
+}
+
+.jobkind {
+	width: 750px;
+	border: 3px solid #FF7400;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 280px;
+	left: 17%;
+	padding: 10px;
+	font-size: 13px;
+	display: none;
+}
+
+.city .cancel, .city1 .cancel, .city2 .cancel, .trade .cancel, .trade1 .cancel,
+	.jobkind .cancel {
+	float: right;
+	color: #FF7400;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.city dl, .city1 dl, .city2 dl, .trade dl, .trade1 dl, .jobkind dl {
+	margin-bottom: 5px;
+	float: left;
+}
+
+.city dl dt, .city1 dl dt, .city2 dl dt, .trade dl dt, .trade1 dl dt,
+	.jobkind dl dt {
+	float: left;
+	margin-right: 10px;
+	color: #FF7400;
+	font-weight: bold;
+}
+
+.city dl dd, .city1 dl dd, .city2 dl dd, .trade dl dd, .trade1 dl dd,
+	.jobkind dl dd {
+	float: left;
+}
+
+.city dl dd span, .city1 dl dd span, .city2 dl dd span, .trade dl dd span,
+	.trade1 dl dd span, .jobkind dl dd span {
+	margin-right: 5px;
+}
+
+dl dd a {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background-image: url(./images/icon1.jpg);
+	position: absolute;
+	border: 2px solid #FF9000;
+}

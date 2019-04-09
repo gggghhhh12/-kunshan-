@@ -1,0 +1,286 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#header {
+	width: 100%;
+	height: 50px;
+	background-color: #000000;
+}
+
+#left {
+	top: 10;
+	width: 20%;
+	height: 700px;
+	padding: 10px;
+	float: left;
+}
+
+#mainbody {
+	width: 1080px;
+	margin: 0 auto;
+	background-image: url("./images/53.jpg");
+}
+
+.select {
+	width: 650px;
+	padding: 10px;
+	float: left;
+}
+
+.recommend {
+	width: 260px;
+	height: 700px;
+	padding: 10px;
+	float: right;
+	overflow: hidden;
+}
+
+.select .condition {
+	border: 1px solid #000000;
+}
+
+.condition dl dd a {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background-image: url(./images/icon1.jpg);
+	position: absolute;
+	border: 2px solid #FF9000;
+}
+
+.select dl {
+	margin: 10px 20px;
+	float: left;
+}
+
+.select dt {
+	font-size: 18px;
+	font-family: KaiTi;
+	color: #000000;
+	display: inline-block;
+}
+
+.select dd {
+	display: inline-block;
+}
+
+dl dd input[type="text"] {
+	border: 2px solid #FF9B48;
+	font-size: 15px;
+}
+
+dl dd select {
+	border: 2px solid #FF9B48;
+	font-size: 15px;
+}
+
+.select .btn {
+	text-align: center;
+}
+
+.select input[type="button"] {
+	background-color: #FF4E00;
+	text-align: center;
+	width: 150px;
+	height: 35px;
+	font-size: 18px;
+	color: #FFFFFF;
+	margin: 15px 260px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 0px;
+}
+
+.select .selectResult {
+	margin: 15px 0px;
+}
+
+.selectResult .resultTitle {
+	border: 1px solid #bbb;
+	padding: 0 10px;
+}
+
+.selectResult .t1 {
+	display: inline-block;
+	line-height: 30px;
+	width: 120px;
+	height: 30px;
+	font-size: 13px;
+	text-align: left;
+}
+
+.t1 a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.t1 a:hover {
+	color: #0066CC;
+}
+
+.selectResult .t2 {
+	display: inline-block;
+	line-height: 30px;
+	width: 100px;
+	height: 30px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.selectResult .t3 {
+	display: inline-block;
+	line-height: 30px;
+	width: 180px;
+	height: 30px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.selectResult .t4 {
+	display: inline-block;
+	line-height: 30px;
+	width: 180px;
+	height: 30px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.selectResult .selectContent {
+	padding: 10px;
+}
+
+.recommend .title h4 {
+	margin-bottom: 10px;
+	float: left;
+}
+
+.recommend .change {
+	font-size: 13px;
+	text-decoration: underline;
+	color: #E64;
+	float: right;
+}
+
+.recommend .recdContent {
+	margin: 10px 0px;
+}
+
+.recdContent .single {
+	padding-bottom: 5px;
+	border-bottom: 2px solid #bbb;
+}
+
+.recdContent .s1 {
+	display: inline-block;
+	width: 130px;
+	font-size: 13px;
+	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.s1 a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+.s1 a:hover {
+	color: #22AABB;
+}
+
+.recdContent .s2 {
+	display: inline-block;
+	width: 100px;
+	font-size: 13px;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.recdContent .s3 {
+	display: inline-block;
+	width: 260px;
+	font-size: 13px;
+	text-align: left;
+	margin: 3px 0px
+}
+
+.recdContent .s4 {
+	display: inline-block;
+	font-size: 13px;
+	text-align: left;
+}
+
+.tradeAndCount h4 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+	clear: both;
+}
+
+.tradeAndCount .r1 {
+	display: inline-block;
+	width: 100px;
+	font-size: 13px;
+	color: #000;
+	margin: 5px 0px;
+}
+
+.tradeAndCount .r2 {
+	display: inline-block;
+	width: 100px;
+	font-size: 13px;
+	color: #000;
+	margin: 5px 0px;
+}
+
+.tradeAndCount .r3 {
+	display: inline-block;
+	font-size: 13px;
+	color: #000;
+	margin: 5px 0px;
+}
+
+.city, .trade {
+	width: 750px;
+	border: 3px solid #FF7400;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 130px;
+	left: 13%;
+	padding: 10px;
+	font-size: 13px;
+	display: none;
+}
+
+.city .cancel, .trade .cancel {
+	float: right;
+	color: #FF7400;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.city dl, .trade dl {
+	margin-bottom: 5px;
+	float: left;
+}
+
+.city dl dt, .trade dl dt {
+	float: left;
+	margin-right: 10px;
+	color: #FF7400;
+	font-weight: bold;
+}
+
+.city dl dd, .trade dl dd {
+	float: left;
+}
+
+.city dl dd span, .trade dl dd span {
+	margin-right: 5px;
+}

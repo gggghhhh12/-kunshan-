@@ -1,0 +1,259 @@
+@CHARSET "UTF-8";
+
+#mainbody {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#mainbody .select {
+	width: 700px;
+	float: left;
+	padding: 10px;
+	z-index: -1;
+}
+
+#left {
+	width: 20%;
+	height: 700px;
+	padding: 10px;
+	float: left;
+}
+
+#mainbody .recommend {
+	width: 180px;
+	padding: 1px;
+	float: right;
+}
+
+.select input[type="text"] {
+	position: relative;
+}
+
+.text {
+	width: 198px;
+	border: 2px solid #FF9B48;
+	margin: 10px;
+	float: left;
+}
+
+.text a {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background-image: url(./images/icon1.jpg);
+	position: absolute;
+	border: 2px solid #DDDDDD;
+}
+
+.submit input[type="submit"] {
+	background-color: #FF4E00;
+	text-align: center;
+	width: 150px;
+	height: 35px;
+	font-size: 18px;
+	color: #FFFFFF;
+	margin: 15px 260px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 0px;
+}
+
+form {
+	border: 1px solid #000000;
+	margin-bottom: 10px;
+}
+
+.option {
+	border: 1px solid #000000;
+}
+
+.option dd {
+	margin-bottom: 5px;
+}
+
+.option dt {
+	font-size: 13px;
+	color: #8F8F8F;
+	display: inline-block;
+}
+
+.option dd {
+	font-size: 13px;
+	display: inline-block;
+}
+
+.result {
+	width: 700px;
+}
+
+.result .resulttitle {
+	border: 1px solid #DDD;
+	margin-top: 10px;
+}
+
+.result .t1 {
+	display: inline-block;
+	line-height: 30px;
+	width: 190px;
+	height: 50px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.result .t2 {
+	display: inline-block;
+	line-height: 30px;
+	width: 200px;
+	height: 50px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.result .t3 {
+	display: inline-block;
+	line-height: 30px;
+	width: 140px;
+	height: 50px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.result .t4 {
+	display: inline-block;
+	line-height: 30px;
+	width: 144px;
+	height: 50px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.resultcontext a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.resultcontext a:hover {
+	color: #0066CC;
+}
+
+.result .error {
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.recommend .title h4 {
+	margin-bottom: 10px;
+}
+
+.newjob dl {
+	margin: 10px 0px;
+	overflow: hidden;
+}
+
+.newjob dl dt {
+	font-size: 14px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #127db3;
+}
+
+.newjob dl dd {
+	font-size: 13px;
+	color: #666;
+	float: left;
+	margin-right: 20px;
+}
+
+.newjob dl dt a {
+	text-decoration: none;
+}
+
+.newjob dl dt a:hover {
+	color: #22AABB;
+}
+
+.tradeAndCount h4 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.tradeAndCount .s1 {
+	display: inline-block;
+	width: 100px;
+	font-size: 13px;
+	color: #666;
+	margin: 5px 0px;
+}
+
+.tradeAndCount .s2 {
+	display: inline-block;
+	width: 100px;
+	font-size: 13px;
+	color: #666;
+	margin: 5px 0px;
+}
+
+.tradeAndCount .s3 {
+	display: inline-block;
+	font-size: 13px;
+	color: #666;
+	margin: 5px 0px;
+}
+
+.city, .jobkind, .trade {
+	width: 750px;
+	border: 3px solid #FF7400;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 112px;
+	left: 17%;
+	padding: 10px;
+	font-size: 13px;
+	display: none;
+}
+
+.city .cancel, .jobkind .cancel, .trade .cancel {
+	float: right;
+	color: #FF7400;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.city dl, .jobkind dl, .trade dl {
+	margin-bottom: 5px;
+	float: left;
+}
+
+.city dl dt, .jobkind dl dt, .trade dl dt {
+	float: left;
+	margin-right: 10px;
+	color: #FF7400;
+	font-weight: bold;
+}
+
+.city dl dd, .jobkind dl dd, .trade dl dd {
+	float: left;
+}
+
+.city dl dd span, .jobkind dl dd span, .trade dl dd span {
+	margin-right: 5px;
+}
+.resultcontext table {
+	background-color: #FFDCA9;
+	margin-left: 20px;
+	border: 1px solid #D7A372;
+	line-height: 30px;
+}
+.resultcontext tr {
+	border-bottom: 1px solid #D7A372;
+}
+.resultcontext th{
+	text-align: center;
+	font-size: 13px;
+}
+
+.resultcontext td {
+	text-align: center;
+	font-size: 13px;
+}

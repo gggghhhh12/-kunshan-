@@ -1,0 +1,153 @@
+@CHARSET "UTF-8";
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+#mainbody {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#mainbody .store {
+	width: 610px;
+	padding: 30px;
+	height: 650px;
+	border: 2px solid #bbb;
+	float: left;
+}
+
+#mainbody .recommend {
+	width: 250px;
+	float: right;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.recommend h4 {
+	float: left;
+}
+
+.recommend .change {
+	font-size: 13px;
+	text-decoration: underline;
+	color: #E64;
+	float: right;
+}
+
+.recommend .recdContent {
+	margin: 40px 0px;
+}
+
+.recdContent .s1 {
+	display: inline-block;
+	font-size: 14px;
+	width: 130px;
+	text-align: left;
+	color: #5C44EE;
+	font-weight: bold;
+	margin: 8px 0px;
+}
+
+.recdContent .s1 a {
+	text-decoration: none;
+}
+
+.recdContent .s1 a:hover {
+	color: #22AABB;
+}
+
+.recdContent .s2 {
+	display: inline-block;
+	font-size: 13px;
+	width: 90px;
+	text-align: right;
+	color: #666;
+}
+
+.recdContent .s3 {
+	display: inline-block;
+	width: 100px;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 15px;
+}
+
+.recdContent .s4 {
+	display: inline-block;
+	font-size: 13px;
+	width: 120px;
+	color: #666;
+	margin-bottom: 15px;
+	text-align: right;
+}
+
+.store h4 {
+	margin-bottom: 10px;
+}
+
+.storeContent {
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.storeContent .t1 {
+	display: inline-block;
+	line-height: 30px;
+	width: 80px;
+	height: 30px;
+	font-size: 13px;
+	text-align: left;
+}
+
+.storeContent .t1 a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.storeContent .t1 a:hover {
+	color: #0066CC;
+}
+
+.storeContent .t2 {
+	display: inline-block;
+	line-height: 30px;
+	width: 80px;
+	height: 30px;
+	font-size: 13px;
+	text-align: left;
+}
+
+.storeContent .t3 {
+	display: inline-block;
+	line-height: 30px;
+	width: 160px;
+	height: 30px;
+	font-size: 13px;
+	text-align: left;
+}
+
+.storeContent .t4 {
+	display: inline-block;
+	line-height: 30px;
+	width: 160px;
+	height: 30px;
+	font-size: 13px;
+	text-align: left;
+}
+
+.storeContent .t5 {
+	display: inline-block;
+	line-height: 30px;
+	width: 80px;
+	height: 30px;
+	font-size: 13px;
+	text-align: center;
+	text-decoration: underline;
+	color: #FF0000;
+}
+
+.store .info {
+	font-size: 13px;
+}

@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+/** {
+	outline: 0;
+}
+#footer 
+{
+	background-color:#fff;
+	clear:both;
+	border-top:1px solid #ebebeb;
+	position:relative;
+	z-index:1001;
+}
+#footer div{
+	display:block;
+	line-height:22px;
+	font-size:14px;
+	color:#333;
+}
+#footer .wrapper{
+	margin: 22px auto;
+	position: relative;
+}
+ .wrapper div
+{
+	display:block;
+}
+.wrapper {
+	
+	background-color: #00b38a;
+}*/
+
+#footer {
+	background-color: #fff;
+	clear: both;
+	border-top: 1px solid #ebebeb;
+	position: relative;
+	z-index: 1001;
+}
+
+.footer_fix {
+	position: fixed !important;
+	bottom: 0;
+	left: 0;
+	right: 0
+}
+
+#footer .wrapper {
+	margin: 0 auto;
+	position: relative;
+}
+
+#footer .wechat {
+	width: 1200px;
+	max-width: 1200px;
+	margin: 49px auto 66px;
+	white-space: nowrap;
+	display: flex
+}
+
+#footer .wechat .footer_column {
+	border-right: 1px solid #E8E8E8;
+	padding-right: 130px
+}
+
+#footer .wechat .footer_column .footer_item {
+	display: flex;
+	
+	justify-content: space-between
+}
+.item_code {
+	flex-direction: column;
+	justify-content: space-around!important;
+}
+#footer .wechat .footer_column a {
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+#footer .wechat .footer_column .footer_wechat
+	{
+	position: relative
+}
+
+
+#footer .wechat .footer_column .footer_wechat .footer_item img {
+	display: none;
+	position: absolute;
+	top: 200px;
+	left: 100px;
+	z-index: 1001;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1);
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1);
+	border-radius: 3px
+	
+}
+
+#footer .wechat a, #footer .wechat span.tel {
+	color: #555;
+	font-size: 14px;
+	text-decoration: none
+}
+#footer .wechat a:hover {
+	color: #00B38A
+}
+#footer span em {
+	font-size: 14px;
+	font-style: normal
+}
+.footer_right {
+	margin-left: 130px;
+	display: flex;
+	flex: 1;
+	justify-content: space-between
+}
+.footer_business .footer_title {
+	font-size: 18px;
+	font-weight: 600;
+	color: #555;
+	margin-bottom: 30px
+}
+.footer_business a, .footer_business span {
+	display: block;
+	margin-bottom: 10px
+}
+
+.footer_business a:last-of-type {
+	margin-bottom: 0
+}
+
