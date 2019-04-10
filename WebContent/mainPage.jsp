@@ -521,6 +521,7 @@ $(document).ready(function () {
                         <span class="wordCut">机械设计</span>
                     </div>
                 </div>
+                <!-- 666 -->
                 <div class="position_li_bottom">
                     <img src="./images/zhenhiangdongfang.png"width="50" height="50" >
                     <div class="bottom_right">
