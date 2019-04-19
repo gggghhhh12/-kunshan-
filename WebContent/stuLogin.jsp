@@ -34,7 +34,6 @@ file="./css/mainPage.css"%>
 		document.getElementById("image").src="<%=request.getContextPath() %>/imageServlet?date="+new Date().getTime();
 		$("#checkcode").val("");   // 将验证码清空
 	} 
-	 
 	 function verificationcode(){
 		 var text=$.trim($("#checkcode").val());
 		 $.post("${pageContext.request.contextPath}/verificationServlet",{op:text},function(data){
@@ -83,12 +82,12 @@ file="./css/mainPage.css"%>
 				验证码：<input type="text" name="checkcode"  id="checkcode"/>
   	           <img  src="<%=request.getContextPath() %>/imageServlet" id="image" />
 	           <a href="javascript:reload();"><label>换一张</label></a><br>
-	          <input  type="button" value="提交"  onclick="javascript:verificationcode()">
+	         
 	          <span id="span"></span>
 				<div class="forgot">
 					<div class="error">${error }</div>
 					<a href="modifyPassword.jsp?usertype=student">修改密码</a>
-					<input style="cursor: pointer" type="submit" value="登录">
+					<input style="cursor: pointer" type="submit" onclick="javascript:verificationcode()" value="登录">
 				</div>
 			</form>
 		</div>
