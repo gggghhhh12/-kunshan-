@@ -59,10 +59,9 @@ file="./css/mainPage.css"%>
 		<div class="login-top">
 			<h1>注册窗口</h1>
 			<form action="servlet/RegisterServlet" method="post">
-				<input type="text" name="username" placeholder="username"> <input
-					type="password" name="password" placeholder="pasword"> <input
-					type="password" name="confirmPassword"
-					placeholder="Confirm Password">
+				<input type="text" name="username" placeholder="username">
+				 <input type="password" name="password" placeholder="pasword"> 
+				 <input type="password" name="confirmPassword" placeholder="Confirm Password">
 				<div class="forgot">
 					<div class="error">${error }</div>
 					<input style="cursor: pointer" type="submit" value="注册">

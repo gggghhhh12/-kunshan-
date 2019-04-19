@@ -5,10 +5,12 @@ package priv.zx.ecruit.controller;
  * 将数据库中原先的简历信息填写到表单中servlet，方便修改
  */
 import java.io.IOException;
-import java.sql.Date;
-import java.sql.SQLException;
-import java.util.Calendar;
 
+import java.util.Date;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -66,10 +68,31 @@ public class stuModifyResumeServlet extends HttpServlet {
 		request.setAttribute("education", edu);
 		request.setAttribute("jobIntention", ji);
 		//把生日分解为年、月、日存入request，方便页面使用
+		Date birthday =new Date();
+		Date entertime =new Date();
+		Date gradtime=new Date();
+		String birthday2,entertime2,gradtime2;
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		
-		Date birthday= new Date(bi.getBirthday().getTime());
-		Date entertime=new Date( edu.getEnterTime().getTime());
-		Date gradtime=new Date(edu.getGradTime().getTime());
+		try {
+			birthday= new Date(bi.getBirthday().getTime());
+			entertime=new Date( edu.getEnterTime().getTime());
+			gradtime=new Date(edu.getGradTime().getTime());
+		} catch (NullPointerException l) {
+			birthday2=df.format(birthday);
+			entertime2=df.format(entertime);
+			gradtime2=df.format(gradtime);
+			try {
+				birthday=df.parse(birthday2);
+				entertime=df.parse(entertime2);
+				gradtime=df.parse(gradtime2);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			l.printStackTrace();
+		}
+		
 		//int birYear = c.get(Calendar.YEAR);
 		//int birMonth = c.get(Calendar.MONTH)+1;
 		//int birDay = c.get(Calendar.DATE);
