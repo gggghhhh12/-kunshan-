@@ -28,6 +28,27 @@ include
  
 file="./css/mainPage.css"%>
 </style>
+<script type="text/javascript" src="./js/jQuery1.9.1.js"></script>
+<script type="text/javascript">
+	 function reload(){
+		document.getElementById("image").src="<%=request.getContextPath() %>/imageServlet?date="+new Date().getTime();
+		$("#checkcode").val("");   // 将验证码清空
+	} 
+	 
+	 function verificationcode(){
+		 var text=$.trim($("#checkcode").val());
+		 $.post("${pageContext.request.contextPath}/verificationServlet",{op:text},function(data){
+			 data=parseInt($.trim(data));
+			 if(data>0){
+				 $("#span").text("验证成功!").css("color","green");
+			 }else{
+				 $("#span").text("验证失败!").css("color","red");
+				 reload();  //验证失败后需要更换验证码
+			 }
+		 });
+		 $("#checkcode").val(""); // 将验证码清空
+	 }
+</script>
 </head>
 
 <body>
@@ -57,12 +78,17 @@ file="./css/mainPage.css"%>
 		<div class="login-top">
 			<h1>登录窗口</h1>
 			<form action="servlet/stuLoginServlet" method="post">
-				<input type="text" name="username" placeholder="username"> <input
-					type="password" name="password" placeholder="password">
+				<input type="text" name="username" placeholder="username"> 
+				<input type="password" name="password" placeholder="password">
+				验证码：<input type="text" name="checkcode"  id="checkcode"/>
+  	           <img  src="<%=request.getContextPath() %>/imageServlet" id="image" />
+	           <a href="javascript:reload();"><label>换一张</label></a><br>
+	          <input  type="button" value="提交"  onclick="javascript:verificationcode()">
+	          <span id="span"></span>
 				<div class="forgot">
 					<div class="error">${error }</div>
-					<a href="modifyPassword.jsp?usertype=student">修改密码</a> <input
-						style="cursor: pointer" type="submit" value="登录">
+					<a href="modifyPassword.jsp?usertype=student">修改密码</a>
+					<input style="cursor: pointer" type="submit" value="登录">
 				</div>
 			</form>
 		</div>
