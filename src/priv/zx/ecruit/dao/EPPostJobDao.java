@@ -46,6 +46,28 @@ public class EPPostJobDao {
 		DBUtil.close(conn);
 	}
 	
+	public ArrayList<EPPostJob> getLatestEPPostJob()throws SQLException{
+	    Connection conn=DBUtil.getConnection();
+	    String sql="select tb_eppostjob.EPusername,EPname,jobname,jobsalary,jobdiploma from tb_eppostjob ,tb_epdata where jobcheck='1'and tb_eppostjob.EPusername=tb_epdata.EPusername order by postdate desc";
+	    PreparedStatement ptmt=conn.prepareStatement(sql);
+	    ResultSet rs=ptmt.executeQuery();
+	    ArrayList<EPPostJob> eppjs=new ArrayList<EPPostJob>();
+	    while(rs.next()) {
+	        EPPostJob eppj=new EPPostJob();
+	        System.out.println(rs.getString("EPusername")+" "+rs.getString("EPname")+" "
+	                +rs.getString("jobname")+" "+rs.getString("jobsalary")+" "
+	                +rs.getString("jobdiploma"));
+	        eppj.setEPusername(rs.getString("EPusername"));
+	        eppj.setEPname(rs.getString("EPname"));
+	        eppj.setJobname(rs.getString("jobname"));
+	        eppj.setJobsalary(rs.getString("jobsalary"));
+	        eppj.setJobdiploma(rs.getString("jobdiploma"));
+	        eppjs.add(eppj);
+	    }
+	    
+	    return eppjs;
+	}
+	
 	public ArrayList<EPPostJob> getEPPostJob(String EPusername) throws SQLException{
 		Connection conn = DBUtil.getConnection();
 		String sql = "" +

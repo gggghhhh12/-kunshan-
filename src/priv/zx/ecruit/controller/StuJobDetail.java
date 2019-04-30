@@ -42,9 +42,6 @@ public class StuJobDetail extends HttpServlet {
 					}else{
 						sb.append(letters[j]);
 					}
-					if((j+1)%30 == 0){
-						sb.append("<br>".toCharArray());
-					}
 				}
 				sb.append("<br>".toCharArray());
 			}		

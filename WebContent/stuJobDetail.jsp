@@ -126,14 +126,9 @@ file="./css/stuJobDetail.css"%>
 	<div id="mainbody">
 		<div class="leftInfo">
 			<div class="epInfo">
-				<%  String userlevel = (String)session.getAttribute("userlevel");
-					if(userlevel.equals("0"))
-					{
-				%>
-				<h3>XXXX公司</h3>
-				<%}else{%>
+				
 				<h3>${epData.EPname }</h3>
-				<%} %>
+				
 				<div class="info">
 					<p>规模：${epData.EPscale }</p>
 					<p>行业：${epData.EPtrade }</p>
@@ -158,14 +153,13 @@ file="./css/stuJobDetail.css"%>
 							href="servlet/StuJobDetail?EPusername=${recommends[0].EPusername }&jobname=${recommends[0].jobname }"
 							target="_blank">${recommends[0].jobname }</a>
 						</span> <span class="s2">${recommends[0].salary }</span>
-						<% 
-					if(userlevel.equals("0"))
-					{
-					%>
-						<span class="s2">XXX公司</span>
-						<%}else{ %>
+						
+					
+					
+						
+						
 						<span class="s3">${recommends[0].EPname }</span>
-						<%} %>
+						
 						<span class="s4">${recommends[0].jobaddr }</span>
 						<hr>
 						<span class="s1"> <a
@@ -173,13 +167,13 @@ file="./css/stuJobDetail.css"%>
 							target="_blank">${recommends[1].jobname }</a>
 						</span> <span class="s2">${recommends[1].salary }</span>
 						<% 
-					if(userlevel.equals("0"))
-					{
+					
+					
 					%>
-						<span class="s2">XXX公司</span>
-						<%}else{ %>
+						
+						
 						<span class="s3">${recommends[1].EPname }</span>
-						<%} %>
+						
 						<span class="s4">${recommends[1].jobaddr }</span>
 
 						<hr>
@@ -187,14 +181,12 @@ file="./css/stuJobDetail.css"%>
 							href="servlet/StuJobDetail?EPusername=${recommends[2].EPusername }&jobname=${recommends[2].jobname }"
 							target="_blank">${recommends[2].jobname }</a>
 						</span> <span class="s2">${recommends[2].salary }</span>
-						<% 
-					if(userlevel.equals("0"))
-					{
-					%>
-						<span class="s2">XXX公司</span>
-						<%}else{ %>
+						
+					
+						
+						
 						<span class="s3">${recommends[2].EPname }</span>
-						<%} %>
+						
 						<span class="s4">${recommends[2].jobaddr }</span>
 
 						<hr>
@@ -253,23 +245,19 @@ file="./css/stuJobDetail.css"%>
 			<dl>
 
 				<dt>公司电话</dt>
-				<% 
-					System.out.print(userlevel);
-					if(userlevel.equals("0")){
-				%>
-				<dd>XXXXXXXXXXXXXXX</dd>
-				<%}else{ %>
+				
+				
+				
 				<dd>${epData.EPtel }</dd>
-				<%} %>
+				
 			</dl>
 			<hr align="center" size="2px" color="#DCE0E7" noshade>
 			<dl>
 				<dt>公司邮箱</dt>
-				<% if(userlevel.equals("0")) {%>
-				<dd>XXXXXXXXXXXXXXXXXXXXX</dd>
-				<%}else{ %>
+				
+				
 				<dd>${epData.EPemail }</dd>
-				<%} %>
+				
 			</dl>
 			<hr align="center" size="2px" color="#DCE0E7" noshade>
 			<dl>
@@ -284,11 +272,9 @@ file="./css/stuJobDetail.css"%>
 			<hr align="center" size="2px" color="#DCE0E7" noshade>
 			<dl>
 				<dt>联系人电话</dt>
-				<% if(userlevel.equals("0")) {%>
-				<dd>XXXXXXXXXXXXXXXXXXXXX</dd>
-				<%}else{ %>
+				
 				<dd>${epData.EPmobile }</dd>
-				<%} %>
+				
 			</dl>
 			<h3>公司信息</h3>
 			<hr align="center" size="4px" color="#DCE0E7" noshade>

@@ -37,7 +37,7 @@ public class PermissionFilter implements Filter {
                 (servletpath.equals("/servlet/stuLoginServlet"))||
                 (servletpath.equals("/servlet/EPLoginServlet"))||
                 (servletpath.equals("/servlet/AdminLoginServlet"))||
-                (servletpath.equals("/servlet/MainPageServlet"))||
+                (servletpath.equals("/servlet/MainPageServlet_new"))||
                 (servletpath.equals("/servlet/RegisterServlet"))||
                 (servletpath.equals("/servlet/EPRegisterServlet"))||
                 (servletpath.equals("/servlet/RegisterServlet")) ||
@@ -51,8 +51,9 @@ public class PermissionFilter implements Filter {
                 chain.doFilter(req, resp);
                 //登录失败,则跳转到登录界面
             }else {
-                RequestDispatcher rd=hreq.getRequestDispatcher("/index.jsp");
-                rd.forward(hreq,hresp);
+                chain.doFilter(req, resp);
+                /*RequestDispatcher rd=hreq.getRequestDispatcher("/index.jsp");
+                rd.forward(hreq,hresp);*/
             }
         }
     }

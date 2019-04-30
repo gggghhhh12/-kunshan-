@@ -1,960 +1,955 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://java.sun.com/xml/ns/javaee"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-	version="2.5">
-	<display-name></display-name>
-	<servlet>
-  	<servlet-name>ImageServlet</servlet-name>
-  	<servlet-class>priv.zx.ecruit.controller.ImageServlet</servlet-class>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>ImageServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.ImageServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>ImageServlet</servlet-name>
-  	<url-pattern>/imageServlet</url-pattern>
+    <servlet-name>ImageServlet</servlet-name>
+    <url-pattern>/imageServlet</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
-  	<servlet-name>VerificationServlet</servlet-name>
-  	<servlet-class>priv.zx.ecruit.controller.VerificationServlet</servlet-class>
+  <servlet>
+    <servlet-name>VerificationServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.VerificationServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>VerificationServlet</servlet-name>
-  	<url-pattern>/verificationServlet</url-pattern>
+    <servlet-name>VerificationServlet</servlet-name>
+    <url-pattern>/verificationServlet</url-pattern>
   </servlet-mapping>
-  
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>RegisterServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.RegisterServlet</servlet-class>
-	</servlet>
-		<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>BrowsePostJobDownServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.BrowsePostJobDownServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>BrowseModifyStatusServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.BrowseModifyStatusServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>browseEpServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.browseEpServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>browseStuServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.browseStuServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>BrowseLoginServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.BrowseLoginServlet</servlet-class>
-	</servlet>
-	
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>ModifyPasswordServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.ModifyPasswordServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>BasicinfoServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.BasicinfoServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>stuLoginServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.stuLoginServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EducationServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EducationServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>JobIntentionServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.JobIntentionServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuResumeServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuResumeServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>stuModifyResumeServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.stuModifyResumeServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuHandleModifyResume</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuHandleModifyResume</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPRegisterServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPRegisterServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPLoginServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPLoginServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPDataServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPDataServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPShowDataServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPShowDataServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPModifyDataServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPModifyDataServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPHandleModifyData</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPHandleModifyData</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPPostJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPPostJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPShowPostJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPShowPostJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPModifyPostJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPModifyPostJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPHandleModifyPostJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPHandleModifyPostJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>stuSelectServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.stuSelectServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>stuSelectServlet2</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.stuSelectServlet2</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuJobDetail</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuJobDetail</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuStoreServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuStoreServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuShowStoreServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuShowStoreServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuDelStoreServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuDelStoreServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuHomeServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuHomeServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuJobWantedServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuJobWantedServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPSelectServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPSelectServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuResumeDetailServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuResumeDetailServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPHomeServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPHomeServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPStoreServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPStoreServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPShowStoreServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPShowStoreServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPDelStoreServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPDelStoreServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPStuWantedServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPStuWantedServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuShowInviteServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuShowInviteServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPShowInviteServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPShowInviteServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuKeywordSelectServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuKeywordSelectServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminLoginServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminLoginServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowNewsServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowNewsServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminAddNewsServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminAddNewsServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminModifyNewesServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminModifyNewesServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminDelNewsServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminDelNewsServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowStuUserServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowStuUserServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowResumeServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowResumeServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminDelStuUser</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminDelStuUser</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminDelResumeServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminDelResumeServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowEpUserServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowEpUserServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminDelEPUserServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminDelEPUserServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowEPDataServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowEPDataServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminDelEPDataServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminDelEPDataServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowPostJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowPostJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminDelEPPostJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminDelEPPostJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminModifyPasswordServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminModifyPasswordServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>MainPageServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.MainPageServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPShowJobWantedServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPShowJobWantedServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPDelJobWantedServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPDelJobWantedServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuShowStuWantedServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuShowStuWantedServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuDelStuWantedServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuDelStuWantedServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuAddCommentServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuAddCommentServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowCommentServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowCommentServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminDelCommentServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminDelCommentServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuModifyStatusServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuModifyStatusServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>EPModifyStatusServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPModifyStatusServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowJobPieServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowJobPieServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowStuPieServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowStuPieServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>StuReportServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuReportServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminShowReportServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminShowReportServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>AdminDelReportServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminDelReportServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>EPjobsServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPjobsServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>AdminChangeLevelServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminChangeLevelServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>StuSearchJobByKeyWordServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.StuSearchJobByKeyWordServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>EPChangeMessageStatusServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPChangeMessageStatusServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>EPChangeToStoreServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.EPChangeToStoreServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>AdminLatestEPDataServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminLatestEPDataServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>AdminLatestJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminLatestJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>AdminHandleModifyEPPostJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminHandleModifyEPPostJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>AdminModifyEPPostJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminModifyEPPostJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<display-name>a</display-name>
-		<servlet-name>adminModifyEPDataServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.adminModifyEPDataServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<display-name>a</display-name>
-		<servlet-name>AdminModifyEPData1Servlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminModifyEPData1Servlet</servlet-class>
-	</servlet>
-	<servlet>
-		<display-name>a</display-name>
-		<servlet-name>AdminCheckEPServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminCheckEPServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<display-name>a</display-name>
-		<servlet-name>AdminCheckJobServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminCheckJobServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<display-name>a</display-name>
-		<servlet-name>AdminCheckStuServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminCheckStuServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<display-name>a</display-name>
-		<servlet-name>AdminCheckResumeServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminCheckResumeServlet</servlet-class>
-	</servlet>
-
-	<servlet>
-		<description>AdminModifyEpData1</description>
-		<display-name>a</display-name>
-		<servlet-name>AdminChangeBasicInfoCheckServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminChangeBasicInfoCheckServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>AdminChangeEPCheckServlet</description>
-		<display-name>a</display-name>
-		<servlet-name>AdminChangeEPCheckServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminChangeEPCheckServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>AdminModifyEpData1</description>
-		<display-name>a</display-name>
-		<servlet-name>AdminChangeJobCheckServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminChangeJobCheckServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>AdminModifyEpData1</description>
-		<display-name>a</display-name>
-		<servlet-name>AdminChangeStuCheckServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminChangeStuCheckServlet</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>EPjobsServlet</servlet-name>
-		<url-pattern>/servlet/EPjobsServlet</url-pattern>
-	</servlet-mapping>
-		<servlet-mapping>
-		<servlet-name>BrowsePostJobDownServlet</servlet-name>
-		<url-pattern>/servlet/BrowsePostJobDownServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>BrowseModifyStatusServlet</servlet-name>
-		<url-pattern>/servlet/BrowseModifyStatusServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>browseStuServlet</servlet-name>
-		<url-pattern>/servlet/browseStuServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>RegisterServlet</servlet-name>
-		<url-pattern>/servlet/RegisterServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>browseEpServlet</servlet-name>
-		<url-pattern>/servlet/browseEpServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ModifyPasswordServlet</servlet-name>
-		<url-pattern>/servlet/ModifyPasswordServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>BasicinfoServlet</servlet-name>
-		<url-pattern>/servlet/BasicinfoServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>stuLoginServlet</servlet-name>
-		<url-pattern>/servlet/stuLoginServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EducationServlet</servlet-name>
-		<url-pattern>/servlet/EducationServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>BrowseLoginServlet</servlet-name>
-		<url-pattern>/servlet/BrowseLoginServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>JobIntentionServlet</servlet-name>
-		<url-pattern>/servlet/JobIntentionServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuResumeServlet</servlet-name>
-		<url-pattern>/servlet/StuResumeServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>stuModifyResumeServlet</servlet-name>
-		<url-pattern>/servlet/stuModifyResumeServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuHandleModifyResume</servlet-name>
-		<url-pattern>/servlet/StuHandleModifyResume</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPRegisterServlet</servlet-name>
-		<url-pattern>/servlet/EPRegisterServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPLoginServlet</servlet-name>
-		<url-pattern>/servlet/EPLoginServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPDataServlet</servlet-name>
-		<url-pattern>/servlet/EPDataServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPShowDataServlet</servlet-name>
-		<url-pattern>/servlet/EPShowDataServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPModifyDataServlet</servlet-name>
-		<url-pattern>/servlet/EPModifyDataServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPHandleModifyData</servlet-name>
-		<url-pattern>/servlet/EPHandleModifyData</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPPostJobServlet</servlet-name>
-		<url-pattern>/servlet/EPPostJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPShowPostJobServlet</servlet-name>
-		<url-pattern>/servlet/EPShowPostJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPModifyPostJobServlet</servlet-name>
-		<url-pattern>/servlet/EPModifyPostJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPHandleModifyPostJobServlet</servlet-name>
-		<url-pattern>/servlet/EPHandleModifyPostJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>stuSelectServlet</servlet-name>
-		<url-pattern>/servlet/stuSelectServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>stuSelectServlet2</servlet-name>
-		<url-pattern>/servlet/stuSelectServlet2</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuJobDetail</servlet-name>
-		<url-pattern>/servlet/StuJobDetail</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuStoreServlet</servlet-name>
-		<url-pattern>/servlet/StuStoreServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuShowStoreServlet</servlet-name>
-		<url-pattern>/servlet/StuShowStoreServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuDelStoreServlet</servlet-name>
-		<url-pattern>/servlet/StuDelStoreServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuHomeServlet</servlet-name>
-		<url-pattern>/servlet/StuHomeServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuJobWantedServlet</servlet-name>
-		<url-pattern>/servlet/StuJobWantedServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPSelectServlet</servlet-name>
-		<url-pattern>/servlet/EPSelectServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuResumeDetailServlet</servlet-name>
-		<url-pattern>/servlet/StuResumeDetailServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPHomeServlet</servlet-name>
-		<url-pattern>/servlet/EPHomeServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPStoreServlet</servlet-name>
-		<url-pattern>/servlet/EPStoreServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPShowStoreServlet</servlet-name>
-		<url-pattern>/servlet/EPShowStoreServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPDelStoreServlet</servlet-name>
-		<url-pattern>/servlet/EPDelStoreServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPStuWantedServlet</servlet-name>
-		<url-pattern>/servlet/EPStuWantedServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuShowInviteServlet</servlet-name>
-		<url-pattern>/servlet/StuShowInviteServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPShowInviteServlet</servlet-name>
-		<url-pattern>/servlet/EPShowInviteServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuKeywordSelectServlet</servlet-name>
-		<url-pattern>/servlet/StuKeywordSelectServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminLoginServlet</servlet-name>
-		<url-pattern>/servlet/AdminLoginServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowNewsServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowNewsServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminAddNewsServlet</servlet-name>
-		<url-pattern>/servlet/AdminAddNewsServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminModifyNewesServlet</servlet-name>
-		<url-pattern>/servlet/AdminModifyNewesServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminDelNewsServlet</servlet-name>
-		<url-pattern>/servlet/AdminDelNewsServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowStuUserServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowStuUserServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowResumeServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowResumeServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminDelStuUser</servlet-name>
-		<url-pattern>/servlet/AdminDelStuUser</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminDelResumeServlet</servlet-name>
-		<url-pattern>/servlet/AdminDelResumeServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowEpUserServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowEpUserServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminDelEPUserServlet</servlet-name>
-		<url-pattern>/servlet/AdminDelEPUserServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowEPDataServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowEPDataServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminDelEPDataServlet</servlet-name>
-		<url-pattern>/servlet/AdminDelEPDataServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowPostJobServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowPostJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminDelEPPostJobServlet</servlet-name>
-		<url-pattern>/servlet/AdminDelEPPostJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminModifyPasswordServlet</servlet-name>
-		<url-pattern>/servlet/AdminModifyPasswordServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>MainPageServlet</servlet-name>
-		<url-pattern>/servlet/MainPageServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPShowJobWantedServlet</servlet-name>
-		<url-pattern>/servlet/EPShowJobWantedServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPDelJobWantedServlet</servlet-name>
-		<url-pattern>/servlet/EPDelJobWantedServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuShowStuWantedServlet</servlet-name>
-		<url-pattern>/servlet/StuShowStuWantedServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuDelStuWantedServlet</servlet-name>
-		<url-pattern>/servlet/StuDelStuWantedServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuAddCommentServlet</servlet-name>
-		<url-pattern>/servlet/StuAddCommentServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowCommentServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowCommentServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminDelCommentServlet</servlet-name>
-		<url-pattern>/servlet/AdminDelCommentServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuModifyStatusServlet</servlet-name>
-		<url-pattern>/servlet/StuModifyStatusServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPModifyStatusServlet</servlet-name>
-		<url-pattern>/servlet/EPModifyStatusServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowJobPieServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowJobPieServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowStuPieServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowStuPieServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuReportServlet</servlet-name>
-		<url-pattern>/servlet/StuReportServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminShowReportServlet</servlet-name>
-		<url-pattern>/servlet/AdminShowReportServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminDelReportServlet</servlet-name>
-		<url-pattern>/servlet/AdminDelReportServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminChangeLevelServlet</servlet-name>
-		<url-pattern>/servlet/AdminChangeLevelServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>StuSearchJobByKeyWordServlet</servlet-name>
-		<url-pattern>/servlet/StuSearchJobByKeyWordServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPChangeMessageStatusServlet</servlet-name>
-		<url-pattern>/servlet/EPChangeMessageStatusServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EPChangeToStoreServlet</servlet-name>
-		<url-pattern>/servlet/EPChangeToStoreServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminLatestEPDataServlet</servlet-name>
-		<url-pattern>/servlet/AdminLatestEPDataServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminLatestJobServlet</servlet-name>
-		<url-pattern>/servlet/AdminLatestJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>adminModifyEPDataServlet</servlet-name>
-		<url-pattern>/servlet/adminModifyEPDataServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminModifyEPData1Servlet</servlet-name>
-		<url-pattern>/servlet/AdminModifyEPData1Servlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminModifyEPPostJobServlet</servlet-name>
-		<url-pattern>/servlet/AdminModifyEPPostJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminHandleModifyEPPostJobServlet</servlet-name>
-		<url-pattern>/servlet/AdminHandleModifyEPPostJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminCheckStuServlet</servlet-name>
-		<url-pattern>/servlet/AdminCheckStuServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminCheckJobServlet</servlet-name>
-		<url-pattern>/servlet/AdminCheckJobServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminCheckEPServlet</servlet-name>
-		<url-pattern>/servlet/AdminCheckEPServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminCheckResumeServlet</servlet-name>
-		<url-pattern>/servlet/AdminCheckResumeServlet</url-pattern>
-	</servlet-mapping>
-	<!--AdminChangeStuCheckServlet AdminChangeJobCheckServlet AdminChangeEPCheckServlet 
-		AdminChangeBasicInfoCheckServlet -->
-	<servlet-mapping>
-		<servlet-name>AdminChangeStuCheckServlet</servlet-name>
-		<url-pattern>/servlet/AdminChangeStuCheckServlet</url-pattern>
-	</servlet-mapping>
-
-	<servlet-mapping>
-		<servlet-name>AdminChangeJobCheckServlet</servlet-name>
-		<url-pattern>/servlet/AdminChangeJobCheckServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminChangeEPCheckServlet</servlet-name>
-		<url-pattern>/servlet/AdminChangeEPCheckServlet</url-pattern>
-	</servlet-mapping>
-
-	<servlet-mapping>
-		<servlet-name>AdminChangeBasicInfoCheckServlet</servlet-name>
-		<url-pattern>/servlet/AdminChangeBasicInfoCheckServlet</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<description>AdminModifyStuResumeServlet</description>
-		<display-name>a</display-name>
-		<servlet-name>AdminModifyStuResumeServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminModifyStuResumeServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>AdminHandleModifyResumeServlet</description>
-		<display-name>a</display-name>
-		<servlet-name>AdminHandleModifyResumeServlet</servlet-name>
-		<servlet-class>priv.zx.ecruit.controller.AdminHandleModifyResumeServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>AdminModifyStuResumeServlet</servlet-name>
-		<url-pattern>/servlet/AdminModifyStuResumeServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AdminHandleModifyResumeServlet</servlet-name>
-		<url-pattern>/servlet/AdminHandleModifyResumeServlet</url-pattern>
-	</servlet-mapping>
-
-	<filter>
-		<filter-name>PermissionFilter</filter-name>
-		<filter-class>priv.zx.ecruit.filter.PermissionFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>PermissionFilter</filter-name>
-		<url-pattern>/servlet/*</url-pattern>
-	</filter-mapping>
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BrowsePostJobDownServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.BrowsePostJobDownServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BrowseModifyStatusServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.BrowseModifyStatusServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>browseEpServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.browseEpServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>browseStuServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.browseStuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BrowseLoginServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.BrowseLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ModifyPasswordServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.ModifyPasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BasicinfoServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.BasicinfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>stuLoginServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.stuLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EducationServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EducationServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>JobIntentionServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.JobIntentionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuResumeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuResumeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>stuModifyResumeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.stuModifyResumeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuHandleModifyResume</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuHandleModifyResume</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPRegisterServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPLoginServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPDataServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPShowDataServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPShowDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPModifyDataServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPModifyDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPHandleModifyData</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPHandleModifyData</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPPostJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPPostJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPShowPostJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPShowPostJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPModifyPostJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPModifyPostJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPHandleModifyPostJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPHandleModifyPostJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>stuSelectServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.stuSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>stuSelectServlet2</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.stuSelectServlet2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuJobDetail</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuJobDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuStoreServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuStoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuShowStoreServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuShowStoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuDelStoreServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuDelStoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuHomeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuHomeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuJobWantedServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuJobWantedServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPSelectServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuResumeDetailServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuResumeDetailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPHomeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPHomeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPStoreServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPStoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPShowStoreServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPShowStoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPDelStoreServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPDelStoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPStuWantedServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPStuWantedServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuShowInviteServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuShowInviteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPShowInviteServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPShowInviteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuKeywordSelectServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuKeywordSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowNewsServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminAddNewsServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminAddNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminModifyNewesServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminModifyNewesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminDelNewsServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminDelNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowStuUserServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowStuUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowResumeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowResumeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminDelStuUser</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminDelStuUser</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminDelResumeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminDelResumeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowEpUserServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowEpUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminDelEPUserServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminDelEPUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowEPDataServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowEPDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminDelEPDataServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminDelEPDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowPostJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowPostJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminDelEPPostJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminDelEPPostJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminModifyPasswordServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminModifyPasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MainPageServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.MainPageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MainPageServlet_new</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.MainPageServlet_new</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPShowJobWantedServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPShowJobWantedServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPDelJobWantedServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPDelJobWantedServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuShowStuWantedServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuShowStuWantedServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuDelStuWantedServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuDelStuWantedServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuAddCommentServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuAddCommentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowCommentServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowCommentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminDelCommentServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminDelCommentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuModifyStatusServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuModifyStatusServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EPModifyStatusServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPModifyStatusServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowJobPieServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowJobPieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowStuPieServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowStuPieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuReportServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuReportServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminShowReportServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminShowReportServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminDelReportServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminDelReportServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EPjobsServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPjobsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminChangeLevelServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminChangeLevelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StuSearchJobByKeyWordServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.StuSearchJobByKeyWordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EPChangeMessageStatusServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPChangeMessageStatusServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EPChangeToStoreServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.EPChangeToStoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminLatestEPDataServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminLatestEPDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminLatestJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminLatestJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminHandleModifyEPPostJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminHandleModifyEPPostJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminModifyEPPostJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminModifyEPPostJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>a</display-name>
+    <servlet-name>adminModifyEPDataServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.adminModifyEPDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>a</display-name>
+    <servlet-name>AdminModifyEPData1Servlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminModifyEPData1Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>a</display-name>
+    <servlet-name>AdminCheckEPServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminCheckEPServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>a</display-name>
+    <servlet-name>AdminCheckJobServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminCheckJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>a</display-name>
+    <servlet-name>AdminCheckStuServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminCheckStuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>a</display-name>
+    <servlet-name>AdminCheckResumeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminCheckResumeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>AdminModifyEpData1</description>
+    <display-name>a</display-name>
+    <servlet-name>AdminChangeBasicInfoCheckServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminChangeBasicInfoCheckServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>AdminChangeEPCheckServlet</description>
+    <display-name>a</display-name>
+    <servlet-name>AdminChangeEPCheckServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminChangeEPCheckServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>AdminModifyEpData1</description>
+    <display-name>a</display-name>
+    <servlet-name>AdminChangeJobCheckServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminChangeJobCheckServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>AdminModifyEpData1</description>
+    <display-name>a</display-name>
+    <servlet-name>AdminChangeStuCheckServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminChangeStuCheckServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EPjobsServlet</servlet-name>
+    <url-pattern>/servlet/EPjobsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BrowsePostJobDownServlet</servlet-name>
+    <url-pattern>/servlet/BrowsePostJobDownServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BrowseModifyStatusServlet</servlet-name>
+    <url-pattern>/servlet/BrowseModifyStatusServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>browseStuServlet</servlet-name>
+    <url-pattern>/servlet/browseStuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/servlet/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>browseEpServlet</servlet-name>
+    <url-pattern>/servlet/browseEpServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyPasswordServlet</servlet-name>
+    <url-pattern>/servlet/ModifyPasswordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BasicinfoServlet</servlet-name>
+    <url-pattern>/servlet/BasicinfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>stuLoginServlet</servlet-name>
+    <url-pattern>/servlet/stuLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EducationServlet</servlet-name>
+    <url-pattern>/servlet/EducationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BrowseLoginServlet</servlet-name>
+    <url-pattern>/servlet/BrowseLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JobIntentionServlet</servlet-name>
+    <url-pattern>/servlet/JobIntentionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuResumeServlet</servlet-name>
+    <url-pattern>/servlet/StuResumeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>stuModifyResumeServlet</servlet-name>
+    <url-pattern>/servlet/stuModifyResumeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuHandleModifyResume</servlet-name>
+    <url-pattern>/servlet/StuHandleModifyResume</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPRegisterServlet</servlet-name>
+    <url-pattern>/servlet/EPRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPLoginServlet</servlet-name>
+    <url-pattern>/servlet/EPLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPDataServlet</servlet-name>
+    <url-pattern>/servlet/EPDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPShowDataServlet</servlet-name>
+    <url-pattern>/servlet/EPShowDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPModifyDataServlet</servlet-name>
+    <url-pattern>/servlet/EPModifyDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPHandleModifyData</servlet-name>
+    <url-pattern>/servlet/EPHandleModifyData</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPPostJobServlet</servlet-name>
+    <url-pattern>/servlet/EPPostJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPShowPostJobServlet</servlet-name>
+    <url-pattern>/servlet/EPShowPostJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPModifyPostJobServlet</servlet-name>
+    <url-pattern>/servlet/EPModifyPostJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPHandleModifyPostJobServlet</servlet-name>
+    <url-pattern>/servlet/EPHandleModifyPostJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>stuSelectServlet</servlet-name>
+    <url-pattern>/servlet/stuSelectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>stuSelectServlet2</servlet-name>
+    <url-pattern>/servlet/stuSelectServlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuJobDetail</servlet-name>
+    <url-pattern>/servlet/StuJobDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuStoreServlet</servlet-name>
+    <url-pattern>/servlet/StuStoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuShowStoreServlet</servlet-name>
+    <url-pattern>/servlet/StuShowStoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuDelStoreServlet</servlet-name>
+    <url-pattern>/servlet/StuDelStoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuHomeServlet</servlet-name>
+    <url-pattern>/servlet/StuHomeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuJobWantedServlet</servlet-name>
+    <url-pattern>/servlet/StuJobWantedServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPSelectServlet</servlet-name>
+    <url-pattern>/servlet/EPSelectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuResumeDetailServlet</servlet-name>
+    <url-pattern>/servlet/StuResumeDetailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPHomeServlet</servlet-name>
+    <url-pattern>/servlet/EPHomeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPStoreServlet</servlet-name>
+    <url-pattern>/servlet/EPStoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPShowStoreServlet</servlet-name>
+    <url-pattern>/servlet/EPShowStoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPDelStoreServlet</servlet-name>
+    <url-pattern>/servlet/EPDelStoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPStuWantedServlet</servlet-name>
+    <url-pattern>/servlet/EPStuWantedServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuShowInviteServlet</servlet-name>
+    <url-pattern>/servlet/StuShowInviteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPShowInviteServlet</servlet-name>
+    <url-pattern>/servlet/EPShowInviteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuKeywordSelectServlet</servlet-name>
+    <url-pattern>/servlet/StuKeywordSelectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/servlet/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowNewsServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminAddNewsServlet</servlet-name>
+    <url-pattern>/servlet/AdminAddNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminModifyNewesServlet</servlet-name>
+    <url-pattern>/servlet/AdminModifyNewesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelNewsServlet</servlet-name>
+    <url-pattern>/servlet/AdminDelNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowStuUserServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowStuUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowResumeServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowResumeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelStuUser</servlet-name>
+    <url-pattern>/servlet/AdminDelStuUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelResumeServlet</servlet-name>
+    <url-pattern>/servlet/AdminDelResumeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowEpUserServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowEpUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelEPUserServlet</servlet-name>
+    <url-pattern>/servlet/AdminDelEPUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowEPDataServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowEPDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelEPDataServlet</servlet-name>
+    <url-pattern>/servlet/AdminDelEPDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowPostJobServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowPostJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelEPPostJobServlet</servlet-name>
+    <url-pattern>/servlet/AdminDelEPPostJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminModifyPasswordServlet</servlet-name>
+    <url-pattern>/servlet/AdminModifyPasswordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainPageServlet_new</servlet-name>
+    <url-pattern>/servlet/MainPageServlet_new</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainPageServlet</servlet-name>
+    <url-pattern>/servlet/MainPageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPShowJobWantedServlet</servlet-name>
+    <url-pattern>/servlet/EPShowJobWantedServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPDelJobWantedServlet</servlet-name>
+    <url-pattern>/servlet/EPDelJobWantedServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuShowStuWantedServlet</servlet-name>
+    <url-pattern>/servlet/StuShowStuWantedServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuDelStuWantedServlet</servlet-name>
+    <url-pattern>/servlet/StuDelStuWantedServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuAddCommentServlet</servlet-name>
+    <url-pattern>/servlet/StuAddCommentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowCommentServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowCommentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelCommentServlet</servlet-name>
+    <url-pattern>/servlet/AdminDelCommentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuModifyStatusServlet</servlet-name>
+    <url-pattern>/servlet/StuModifyStatusServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPModifyStatusServlet</servlet-name>
+    <url-pattern>/servlet/EPModifyStatusServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowJobPieServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowJobPieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowStuPieServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowStuPieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuReportServlet</servlet-name>
+    <url-pattern>/servlet/StuReportServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowReportServlet</servlet-name>
+    <url-pattern>/servlet/AdminShowReportServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelReportServlet</servlet-name>
+    <url-pattern>/servlet/AdminDelReportServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminChangeLevelServlet</servlet-name>
+    <url-pattern>/servlet/AdminChangeLevelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuSearchJobByKeyWordServlet</servlet-name>
+    <url-pattern>/servlet/StuSearchJobByKeyWordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPChangeMessageStatusServlet</servlet-name>
+    <url-pattern>/servlet/EPChangeMessageStatusServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EPChangeToStoreServlet</servlet-name>
+    <url-pattern>/servlet/EPChangeToStoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLatestEPDataServlet</servlet-name>
+    <url-pattern>/servlet/AdminLatestEPDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLatestJobServlet</servlet-name>
+    <url-pattern>/servlet/AdminLatestJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>adminModifyEPDataServlet</servlet-name>
+    <url-pattern>/servlet/adminModifyEPDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminModifyEPData1Servlet</servlet-name>
+    <url-pattern>/servlet/AdminModifyEPData1Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminModifyEPPostJobServlet</servlet-name>
+    <url-pattern>/servlet/AdminModifyEPPostJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminHandleModifyEPPostJobServlet</servlet-name>
+    <url-pattern>/servlet/AdminHandleModifyEPPostJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminCheckStuServlet</servlet-name>
+    <url-pattern>/servlet/AdminCheckStuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminCheckJobServlet</servlet-name>
+    <url-pattern>/servlet/AdminCheckJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminCheckEPServlet</servlet-name>
+    <url-pattern>/servlet/AdminCheckEPServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminCheckResumeServlet</servlet-name>
+    <url-pattern>/servlet/AdminCheckResumeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminChangeStuCheckServlet</servlet-name>
+    <url-pattern>/servlet/AdminChangeStuCheckServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminChangeJobCheckServlet</servlet-name>
+    <url-pattern>/servlet/AdminChangeJobCheckServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminChangeEPCheckServlet</servlet-name>
+    <url-pattern>/servlet/AdminChangeEPCheckServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminChangeBasicInfoCheckServlet</servlet-name>
+    <url-pattern>/servlet/AdminChangeBasicInfoCheckServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>AdminModifyStuResumeServlet</description>
+    <display-name>a</display-name>
+    <servlet-name>AdminModifyStuResumeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminModifyStuResumeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>AdminHandleModifyResumeServlet</description>
+    <display-name>a</display-name>
+    <servlet-name>AdminHandleModifyResumeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.AdminHandleModifyResumeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminModifyStuResumeServlet</servlet-name>
+    <url-pattern>/servlet/AdminModifyStuResumeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminHandleModifyResumeServlet</servlet-name>
+    <url-pattern>/servlet/AdminHandleModifyResumeServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>PermissionFilter</filter-name>
+    <filter-class>priv.zx.ecruit.filter.PermissionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PermissionFilter</filter-name>
+    <url-pattern>/servlet/*</url-pattern>
+  </filter-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>

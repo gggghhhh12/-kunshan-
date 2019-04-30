@@ -23,6 +23,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 
 <body>
-	<% response.sendRedirect("/kunshan/servlet/MainPageServlet"); %>
+	<% response.sendRedirect("/kunshan/servlet/MainPageServlet_new"); %>
 </body>
 </html>

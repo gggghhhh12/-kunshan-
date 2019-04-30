@@ -8,7 +8,14 @@ import java.util.Date;
 public class EPPostJob {
 
 	private String EPusername;//公司账户名，主键
-	private String jobname;//职位名称
+	private String EPname;//公司名称
+	public String getEPname() {
+        return EPname;
+    }
+    public void setEPname(String ePname) {
+        EPname = ePname;
+    }
+    private String jobname;//职位名称
 	private String jobsalary;//工资待遇
 	private String jobdiploma;//学历要求
 	private String engrequest;//英语等级要求

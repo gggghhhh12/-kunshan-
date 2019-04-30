@@ -65,7 +65,7 @@ file="./css/mainPageFooter.css"%>
 			if(msg!='null'&&msg!='undefined'&&msg!=""){
 				alert(msg);
 			}
-			   $(".job_list2").hide();
+			    $(".job_list2").hide();
 	            $("#hot_tab").css("color","red");
 	            $("#hot-company").css("color","blue");
 	            $("#hot_tab").click(function (){
@@ -81,12 +81,10 @@ file="./css/mainPageFooter.css"%>
 	                $(".job_list1").hide();
 	            });
 		});
-	</script>
-	<script type="text/javascript">
+</script>
+<script type="text/javascript">
 $(document).ready(function () {
-
     var i = 0;
-
     var clone = $(".banner .img li").first().clone();//克隆第一张图片
     $(".banner .img").append(clone);//复制到列表最后
     var size = $(".banner .img li").size();
@@ -117,8 +115,6 @@ $(document).ready(function () {
         $(".banner .img").stop().animate({ left: -index * 500 }, 500);
         $(this).addClass("on").siblings().removeClass("on");
     });
-
-
 
     /*向左按钮*/
     $(".banner .btn_l").click(function () {
@@ -153,13 +149,11 @@ $(document).ready(function () {
     }
 });
 
-
-
 </script>
 </head>
 <body>
 	<input type="hidden" id="msg" value="<%=(String)request.getAttribute("msg") %>">
-	 <div id="header">
+	<div id="header">
 		<nav>
 			<div class="shouye">
 				<a href="servlet/MainPageServlet"><img src="./images/logo.jpg"width="120" height="50"></a>
