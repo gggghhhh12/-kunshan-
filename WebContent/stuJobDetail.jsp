@@ -35,14 +35,24 @@ file="./css/stuJobDetail.css"%>
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script type="text/javascript">
 		var i = 15;
+		
 		$(document).ready(function(){
+			
+			var stuUsername = "${stuUser}";
+			
 			$(".operation .store a").click(function(){
-				var epUsername = "${epData.EPusername}";
-				var jobname="${epPostJob.jobname }";
-				$.get("servlet/StuStoreServlet",{"epUsername":epUsername,"jobname":jobname},function(data,statusText){
-					var info = data.info;
-					$(".callback").text(info);
-				},"json");
+				if(typeof(stuUsername)!="undefined"&&stuUsername!=""&&stuUsername!=null){
+                    
+                    var epUsername = "${epData.EPusername}";
+                    var jobname="${epPostJob.jobname }";
+                    $.get("servlet/StuStoreServlet",{"epUsername":epUsername,"jobname":jobname},function(data,statusText){
+                        var info = data.info;
+                        $(".callback").text(info);
+                    },"json");
+                }else{
+                	alert("您还没有登录，无法收藏职位");
+                }
+				
 			});
 			
 			$(".recommend .change").click(function(){
@@ -70,36 +80,48 @@ file="./css/stuJobDetail.css"%>
 			});
 			
 			$(".operation input").click(function(){
-				var epUsername = "${epData.EPusername}";
-				var epJobname="${epPostJob.jobname }";
-				$.get("servlet/StuJobWantedServlet",{"epUsername":epUsername,"epJobname":epJobname},function(data,statusText){
-					var info = data.info;
-					$(".callback").text(info);
-				},"json");
+				if(typeof(stuUsername)!="undefined"&&stuUsername!=""&&stuUsername!=null){
+					
+					var epUsername = "${epData.EPusername}";
+                    var epJobname="${epPostJob.jobname }";
+                    $.get("servlet/StuJobWantedServlet",{"epUsername":epUsername,"epJobname":epJobname},function(data,statusText){
+                        var info = data.info;
+                        $(".callback").text(info);
+                    },"json");
+				}else{
+					alert("您还没有登录，无法申请职位");
+				}
 			});
 			
 			//评论功能
 			$(".comment #btnComment").click(function(){
-				$(".comment .content").slideDown("slow");
+				if(typeof(stuUsername)!="undefined"&&stuUsername!=""&&stuUsername!=null){
+					$(".comment .content").slideDown("slow");
+				}else{
+					alert("您还没有登录，无法评论");
+				}
+				
 			});
 
 			$(".comment #btnConfirm").click(function(){
-				var stuUsername = "${stuUser }";
-				var epUsername = "${epData.EPusername }";
-				var relation = $("input[name='relation']:checked").val();
-				var text = $(".comment .content textarea").val();
-				var date = new Date();
-				var time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
-				$.get("servlet/StuAddCommentServlet",{"stuUsername":stuUsername,"epUsername":epUsername,"relation":relation,"content":text},function(data,statusText){
-					
-				},"json");
-				var strHtml = "<div class=\"single\">" +
-							"<span class=\"s1\">" + stuUsername + "</span><span class=\"s2\">与该公司关系：" + relation + "</span>" +
-							"<div class=\"text\">" + text + "</div>" +
-							"<div class=\"time\">" + time + "</div>" +
-							"<hr align=\"center\" size=\"1px\" color=\"#bbb\" noshade>" +
-							"</div>";
-				$(".comment .list").prepend(strHtml);
+				
+				
+					var epUsername = "${epData.EPusername }";
+	                var relation = $("input[name='relation']:checked").val();
+	                var text = $(".comment .content textarea").val();
+	                var date = new Date();
+	                var time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+	                $.get("servlet/StuAddCommentServlet",{"stuUsername":stuUsername,"epUsername":epUsername,"relation":relation,"content":text},function(data,statusText){
+	                    
+	                },"json");
+	                var strHtml = "<div class=\"single\">" +
+	                            "<span class=\"s1\">" + stuUsername + "</span><span class=\"s2\">与该公司关系：" + relation + "</span>" +
+	                            "<div class=\"text\">" + text + "</div>" +
+	                            "<div class=\"time\">" + time + "</div>" +
+	                            "<hr align=\"center\" size=\"1px\" color=\"#bbb\" noshade>" +
+	                            "</div>";
+	                $(".comment .list").prepend(strHtml);
+				
 				$(".comment .content").slideUp("slow");
 			});
 
@@ -109,11 +131,16 @@ file="./css/stuJobDetail.css"%>
 			
 			//举报功能
 			$(".title .report").click(function(){
-				var epUsername = "${epData.EPusername }";
-				$.get("servlet/StuReportServlet",{"epUsername":epUsername},function(data,statusText){
-					var reportMsg = data.reportMsg;
-					$(".title .msg").text(reportMsg);
-				},"json");
+				if(typeof(stuUsername)!="undefined"&&stuUsername!=""&&stuUsername!=null){
+					var epUsername = "${epData.EPusername }";
+	                $.get("servlet/StuReportServlet",{"epUsername":epUsername},function(data,statusText){
+	                    var reportMsg = data.reportMsg;
+	                    $(".title .msg").text(reportMsg);
+	                },"json");
+                }else{
+                	alert("您还没有登录，无法举报");
+                }
+				
 			});
 		});
 	</script>
@@ -126,7 +153,13 @@ file="./css/stuJobDetail.css"%>
 	<div id="mainbody">
 		<div class="leftInfo">
 			<div class="epInfo">
-				
+				<%  String userlevel = (String)session.getAttribute("userlevel");
+                    if(userlevel==null){
+                        userlevel="-1";
+                        System.out.println(userlevel);
+                    }
+               
+                %>
 				<h3>${epData.EPname }</h3>
 				
 				<div class="info">
