@@ -33,6 +33,18 @@ file="./css/adminNewsManage.css"%>
 <script type="text/javascript">
 	  $(document).ready(function(){
 		  goPage(1,10);
+			$("form").on("submit",function(){
+				var start_time=document.getElementById("start_time").value;
+				var end_time=document.getElementById("end_time").value;
+	          if(start_time==''||end_time==''){
+	        	  alert("时间不能为空");
+	        	  return false;
+	          }
+	          else{
+	        	  alert("权限已开启");
+	        	  return true;
+	          }
+	         });
 	  		$(".tablelist a").click(function(){
 	  			if($(this).text()=="删除"){
 	  				if(!confirm("确定要删除吗？")){
@@ -58,6 +70,8 @@ file="./css/adminNewsManage.css"%>
 				var username = $(this).attr("name");
 				$.get("servlet/AdminChangeLevelServlet",{"userlevel":userlevel,"username":username,"usertype":"user"},function(data,statusText){},"json");
 			});
+		
+			
 	  });
 	</script>
 	<script type="text/javascript  " src="./js/fenye.js"></script>
@@ -67,6 +81,14 @@ file="./css/adminNewsManage.css"%>
 <body>
 	<nav>毕业生账号管理</nav>
 	<br>
+	<form action="servlet/AdminPerssionServlet" method="post">
+	<div class="changequanxian" style="width: 98%; border-collapse: collapse; border-spacing: 0;">
+	审核权限:
+	<input type="date" style="width: 180px; height: 30px" placeholder="开始时间" id="start_time" name="start_time">
+	<input type="date" style="width: 180px; height: 30px" placeholder="结束时间" id="end_time" name="end_time">
+	<button id="btn" name="btn">确认</button>
+	</div>
+	</form>
 	<div class="tablelist">
 		<table
 			style="width: 98%; border-collapse: collapse; border-spacing: 0;">

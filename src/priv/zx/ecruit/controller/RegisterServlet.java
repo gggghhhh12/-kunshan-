@@ -4,13 +4,17 @@ package priv.zx.ecruit.controller;
  */
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import priv.zx.ecruit.dao.AdminCheckDao;
 import priv.zx.ecruit.dao.StuUserDao;
+import priv.zx.ecruit.model.AdminPerssion;
 import priv.zx.ecruit.model.User;
 
 public class RegisterServlet extends HttpServlet {
@@ -50,7 +54,19 @@ public class RegisterServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		String username = request.getParameter("username");//得到注册表单中的用户名
+		Date date=new Date();
 		StuUserDao ud = new StuUserDao();
+		AdminCheckDao check= new AdminCheckDao();
+		ArrayList<AdminPerssion> checkResult = null;
+		ArrayList<User> userUnCheck=null;
+		try {
+			userUnCheck=check.userUnCheck();
+			checkResult = check.searchPerssionTime();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
+	
 		try {
 			//判断用户名是否已经被注册
 			if(ud.isExist(username)){
@@ -74,9 +90,29 @@ public class RegisterServlet extends HttpServlet {
 		User u = new User();
 		u.setUsername(username);
 		u.setPassword(password);
+		u.setUserDate(date);
+		
+		//System.out.println(new Date());
 		try {
+			
 			ud.addUser(u);
+			//System.out.println(checkResult.get(0).getStartTime());
+			//System.out.println(checkResult.get(0).getEndTime());
+			
+			if(date.compareTo(checkResult.get(0).getStartTime())>0&&date.compareTo(checkResult.get(0).getEndTime())<0)
+			{
+				check.updateUserCheck(username);
+				for (int i = 0; i < userUnCheck.size(); i++) //让以前没有通过审核的全部通过审核
+				{
+					System.out.println(userUnCheck.get(i).getUsername());
+					check.updateUserCheck(userUnCheck.get(i).getUsername());
+			}
+				
+				request.setAttribute("msg", "注册成功，请登录");
+			}
+			else{
 			request.setAttribute("msg", "注册成功，请等待管理员审核通过！");
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

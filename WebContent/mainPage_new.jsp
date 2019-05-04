@@ -487,7 +487,7 @@
 				<div class="job_list_wrapper">
 					<div class="job_list1" style="display: block">
 						<ul class="position_list_ul">
-							<c:forEach var="EPPostJob" items="${EPPostJobs}">
+							<c:forEach var="EPPostJob" items="${EPPostJobs}" begin="1" end="6">
 								<li>
 								    <div class="position_list_li">
 								        <div class="position_li_top">
@@ -507,6 +507,7 @@
 								                <div class="company_name">${EPPostJob.EPname }</div>
 								                <div class="company_wordcut"></div>
 								            </div>
+								        
 								        </div>
 								    </div>
 								</li>

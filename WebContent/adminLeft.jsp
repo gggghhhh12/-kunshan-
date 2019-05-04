@@ -66,8 +66,7 @@ file="./css/adminLeft.css"%>
 			<li><a href="servlet/AdminCheckEPServlet" target="rightFrame">待审核企业</a></li>
 			<li><a href="servlet/AdminCheckJobServlet" target="rightFrame">待审核职位</a></li>
 			<li><a href="servlet/AdminCheckStuServlet" target="rightFrame">待审核学生账号</a></li>
-			<li><a href="servlet/AdminCheckResumeServlet"
-				target="rightFrame">待审核学生简历</a></li>
+			<li><a href="servlet/AdminCheckResumeServlet" target="rightFrame">待审核学生简历</a></li>
 		</ul>
 		<div class="span">
 			<img src="./images/lefticon01.png" />

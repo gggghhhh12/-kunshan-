@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import java.sql.Date;
 import priv.zx.ecruit.db.DBUtil;
 import priv.zx.ecruit.model.User;
 
@@ -16,11 +17,12 @@ public class StuUserDao {
 		Connection conn = DBUtil.getConnection();
 		String sql = "" +
 				"insert into tb_users " +
-				"(username,password) " +
-				"values(?,?) ";
+				"(username,password,userDate) " +
+				"values(?,?,?) ";
 		PreparedStatement ptmt = conn.prepareStatement(sql);
 		ptmt.setString(1, u.getUsername());
 		ptmt.setString(2, u.getPassword());
+		ptmt.setDate(3,new Date(u.getUserDate().getTime()));
 		ptmt.execute();
 		ptmt.close();
 		DBUtil.close(conn);

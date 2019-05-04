@@ -22,14 +22,14 @@ import priv.zx.ecruit.model.BasicInfo;
 /**
  * Servlet implementation class AdminCheckStuServlet
  */
-@WebServlet("/AdminCheckStuServlet")
-public class AdminCheckStuServlet extends HttpServlet {
+@WebServlet("/AdminPerssionServlet")
+public class AdminPerssionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminCheckStuServlet() {
+    public AdminPerssionServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -53,24 +53,26 @@ public class AdminCheckStuServlet extends HttpServlet {
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		//查找出所有的用户
-		BasicInfoDao bid = new BasicInfoDao();
-		HashMap<String,String> mapUserlevel=new HashMap<String,String>();
-		ArrayList<BasicInfo> arrBasicInfo = new ArrayList<BasicInfo>();
-	
+		AdminCheckDao perss=new AdminCheckDao();
+		String startTime =request.getParameter("start_time");
+		String endTime=request.getParameter("end_time");
+		AdminPerssion perssion=new AdminPerssion();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			perssion.setEndTime(sdf.parse(endTime));
+			perssion.setStartTime(sdf.parse(startTime));
+			perssion.setdaytime(new Date());
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		try {
-		
-			arrBasicInfo = bid.queryUncheckAll();
-			mapUserlevel=bid.queryAllUserlevel();
+			perss.addPerssionTime(perssion);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		request.setAttribute("basicInfos", arrBasicInfo);
-		request.setAttribute("userlevels", mapUserlevel);
-		request.setAttribute("uncheck", "uncheck");
 		//转到adminStuUser.jsp页面
 		request.getRequestDispatcher("../adminStuUser.jsp").forward(request, response);
 	}

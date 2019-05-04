@@ -1,6 +1,7 @@
 package priv.zx.ecruit.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -47,25 +48,41 @@ public class stuLoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
 		String username = request.getParameter("username");//得到登录的用户名
 		String password = request.getParameter("password");//得到登录的密码
-//		System.out.println(username + " " + password);
+		HttpSession session =request.getSession();
+		String verificationCode = (String)session.getAttribute("verificationCode");
+		System.out.print(verificationCode);
+		String checkcode = request.getParameter("checkcode");
+		PrintWriter out = response.getWriter();
+		if(checkcode.isEmpty()==true){
+			request.setAttribute("error", "登录失败，验证码错误");
+			request.getRequestDispatcher("../stuLogin.jsp").forward(request, response);
+		}
+		else{
 		try {
 			StuUserDao ud = new StuUserDao();
 			Boolean ischecked = ud.getChecked(username);
 			
 			String DbPassword = ud.getPassword(username);
-			if(ischecked&&password != null && password.equals(DbPassword)){
+			if(ischecked&&password != null && password.equals(DbPassword)&&checkcode.equals(verificationCode.toLowerCase())){
 				//若登录成功，则将用户名放入session中
-				HttpSession session = request.getSession();
 				String userlevel = ud.getuserlevel(username);
 				session.setAttribute("stuUser", username);
 				session.setAttribute("userlevel", userlevel);
 				session.setAttribute("flag", "login_success");
-				
+				out.println(1);
 				//页面转向登录后界面
 				request.getRequestDispatcher("StuHomeServlet").forward(request, response);
-			}else if(ischecked){
+				
+			}else if(!checkcode.toLowerCase().equals(verificationCode.toLowerCase())&&ischecked&&password != null && password.equals(DbPassword)){
+				
+				request.setAttribute("error", "登录失败，验证码错误");
+				request.getRequestDispatcher("../stuLogin.jsp").forward(request, response);
+			}
+			
+			else if(ischecked){
 				//若登录失败，则返回登录界面
 				request.setAttribute("error", "登录失败，请检查用户名和密码");
 				request.getRequestDispatcher("../stuLogin.jsp").forward(request, response);
@@ -73,10 +90,13 @@ public class stuLoginServlet extends HttpServlet {
 				request.setAttribute("error", "登录失败,请等待管理员审核通过");
 				request.getRequestDispatcher("../stuLogin.jsp").forward(request, response);
 			}
+			out.flush();
+			out.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
+	}
 	}
 
 }

@@ -34,19 +34,9 @@ file="./css/mainPage.css"%>
 		document.getElementById("image").src="<%=request.getContextPath() %>/imageServlet?date="+new Date().getTime();
 		$("#checkcode").val("");   // 将验证码清空
 	} 
-	 function verificationcode(){
-		 var text=$.trim($("#checkcode").val());
-		 $.post("${pageContext.request.contextPath}/verificationServlet",{op:text},function(data){
-			 data=parseInt($.trim(data));
-			 if(data>0){
-				 $("#span").text("验证成功!").css("color","green");
-			 }else{
-				 $("#span").text("验证失败!").css("color","red");
-				 reload();  //验证失败后需要更换验证码
-			 }
-		 });
-		 $("#checkcode").val(""); // 将验证码清空
-	 }
+	  $("form").on("submit",function(){
+          alert("登录成功");
+          });
 </script>
 </head>
 
@@ -82,12 +72,12 @@ file="./css/mainPage.css"%>
 				验证码：<input type="text" name="checkcode"  id="checkcode"/>
   	           <img  src="<%=request.getContextPath() %>/imageServlet" id="image" />
 	           <a href="javascript:reload();"><label>换一张</label></a><br>
-	         
-	          <span id="span"></span>
 				<div class="forgot">
 					<div class="error">${error }</div>
+					 <span id="span"></span>
 					<a href="modifyPassword.jsp?usertype=student">修改密码</a>
-					<input style="cursor: pointer" type="submit" onclick="javascript:verificationcode()" value="登录">
+                   
+					<button style="cursor: pointer" id="b2" >登录</button>
 				</div>
 			</form>
 		</div>

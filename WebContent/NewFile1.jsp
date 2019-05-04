@@ -2,6 +2,8 @@
 	contentType="text/html; charset=utf-8"%>
 <%@page import="priv.zx.ecruit.model.News"%>
 <%@page import="priv.zx.ecruit.dao.NewsDao"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -158,6 +160,8 @@ $(document).ready(function () {
 </script>
 </head>
 <body>
+	<%String userlevel = (String)session.getAttribute("userlevel"); %>
+	<input type="hidden" name="userlevel" value="<%=userlevel %>">
 	<input type="hidden" id="msg" value="<%=(String)request.getAttribute("msg") %>">
 	 <div id="header">
 		<nav>
@@ -413,183 +417,54 @@ $(document).ready(function () {
 <div class="jobcom">
 <ul class="job_tab">
     <li>
-        <a class="hot_tab" id="hot_tab">热门职位</a>
+        <a class="hot_tab" id="hot_tab">最新职位</a>
     </li>
-    <li><a class="new_tab" id="new_tab">最新职位</a></li>
+    <li><a class="new_tab" id="new_tab">热门职位</a></li>
 </ul>
 <div class="job_list_wrapper">
     <div class="job_list1" style="display: block">
         <ul class="position_list_ul">
+
+         <c:forEach var="lastestJob" items="${lastestJobs2 }" >
             <li class="position_list_li">
                 <div class="position_li_top">
-                    <div class="position_name">
-                        机械工程师
-                    </div>
-                    <span class="salary">
+                
+                  <div class="position_name">
+                <a href="servlet/StuJobDetail?EPusername=${lastestJob.epUsername }&jobname=${lastestJob.jobName  }"
+								target="_blank">${lastestJob.jobName }</a>
+                  </div>
+                  <span class="salary">
                         4k-6k
                     </span>
-                    <div class="position_info">
+                     <div class="position_info">
                         本科及以上
                     </div>
-                    <div class="labels">
-                        <span class="wordCut">机械设计</span>
-                        <span class="wordCut">自动化电气</span>
-
-                    </div>
-                </div>
-                <div class="position_li_bottom">
+               </div>
+                 <div class="position_li_bottom">
                     <img src="./images/boshi.png" width="50" height="50" >
                     <div class="bottom_right">
+                   
+						<%if(userlevel.equals("0")) {%>
+						
                         <div class="company_name">
-                            哈尔滨博实自动化股份有限公司
+                          ${lastestJob.epUsername }
                         </div>
-                        <div class="company_wordcut">
-                            化工、冶金、金属加工、哈尔滨
+                        <%}else { %>
+                         <div class="company_name">
+                           ${lastestJob.epUsername }
                         </div>
+                        <%} %>
+                        
                     </div>
                 </div>
-            </li>
-            <li class="position_list_li">
-                <div class="position_li_top">
-                    <div class="position_name">
-                        运营技术
-                    </div>
-                    <span class="salary">
-                        薪资面议
-                    </span>
-                    <div class="position_info">
-                       本科及以上
-                    </div>
-                    <div class="labels">
-                        <span class="wordCut">机械设计制造</span>
-                        <span class="wordCut">电气</span>
-                    </div>
-                </div>
-                <div class="position_li_bottom">
-                    <img src="./images/ditie.png" width="50" height="50" >
-                    <div class="bottom_right">
-                        <div class="company_name">
-                           哈尔滨地铁集团有限公司
-                        </div>
-                        <div class="company_wordcut">
-                            电力牵引、高压绝缘、铁道电气化、</br>哈尔滨
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="position_list_li">
-                <div class="position_li_top">
-                    <div class="position_name">
-                        工艺技术
-                    </div>
-                    <span class="salary">
-                        4.6k-6.6k
-                    </span>
-                    <div class="position_info">
-                        本科及以上
-                    </div>
-                    <div class="labels">
-                        <span class="wordCut">机械类</span>
-                        <span class="wordCut">自动化电气相关</span>
-                    </div>
-                </div>
-                <div class="position_li_bottom">
-                    <img src="./images/jiancheng.png" width="50" height="50" >
-                    <div class="bottom_right">
-                        <div class="company_name">
-                            哈尔滨建成集团有限公司
-                        </div>
-                        <div class="company_wordcut">
-                            兵器工业、航空弹药、哈尔滨
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="position_list_li">
-                <div class="position_li_top">
-                    <div class="position_name">
-                        电气工程师
-                    </div>
-                    <span class="salary">
-                        4k-10k
-                    </span>
-                    <div class="position_info">
-                        本科及以上
-                    </div>
-                    <div class="labels">
-                        <span class="wordCut">自动化控制工程</span>
-                        <span class="wordCut">机械设计</span>
-                    </div>
-                </div>
-                <!-- 666 -->
-                <div class="position_li_bottom">
-                    <img src="./images/zhenhiangdongfang.png"width="50" height="50" >
-                    <div class="bottom_right">
-                        <div class="company_name">
-                            哈尔滨星航光电科技有限公司
-                        </div>
-                        <div class="company_wordcut">
-                            武器型号科研生产、配套光电检测设备、</br>哈尔滨
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="position_list_li">
-                <div class="position_li_top">
-                    <div class="position_name">
-                        算法工程师
-                    </div>
-                    <span class="salary">
-                        薪资面议
-                    </span>
-                    <div class="position_info">
-                        本科、硕士
-                    </div>
-                    <div class="labels">
-                        <span class="wordCut">自动化</span>
-                        <span class="wordCut">数学</span>
-                    </div>
-                </div>
-                <div class="position_li_bottom">
-                    <img src="./images/xingjian.png" width="50" height="50" >
-                    <div class="bottom_right">
-                        <div class="company_name">
-                            哈尔滨行健智能机器人股份有限公司
-                        </div>
-                        <div class="company_wordcut">
-                            机器人、高新技术、哈尔滨
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="position_list_li">
-                <div class="position_li_top">
-                    <div class="position_name">
-                        软件工程师
-                    </div>
-                    <span class="salary">
-                        4k-7k
-                    </span>
-                    <div class="position_info">
-                        本科以上
-                    </div>
-                    <div class="labels">
-                        <span class="wordCut">电气自动化</span>
-                        <span class="wordCut">机电一体化</span>
-                    </div>
-                </div>
-                <div class="position_li_bottom">
-                    <img src="./images/keneng.png" width="50" height="50" >
-                    <div class="bottom_right">
-                        <div class="company_name">
-                            哈尔滨科能融敷科技有限公司
-                        </div>
-                        <div class="company_wordcut">
-                            融敷技术工艺、垃圾焚烧处理、哈尔滨
-                        </div>
-                    </div>
-                </div>
-            </li>
+                </li>
+ </c:forEach>
+
+    
+           
+          
+           
+          
         </ul>
     </div>
 
