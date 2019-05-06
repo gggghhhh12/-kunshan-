@@ -175,6 +175,7 @@ file="./css/stuResume.css"%>
 						<input style="cursor: pointer" type="submit" value="提交">
 					</div>
 				</form>
+				<form action="upload"></form>
 			</div>
 		</div>
 	</div>

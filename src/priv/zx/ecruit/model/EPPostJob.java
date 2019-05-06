@@ -28,7 +28,7 @@ public class EPPostJob {
 	private String jobkind;//职能类别
 	private String jobaddr;//上班地址
 	private int status;//工作信息公开状态
-	
+	private int hitCount;//企业点击次数
 	public String getEPusername() {
 		return EPusername;
 	}
@@ -112,6 +112,12 @@ public class EPPostJob {
 	}
 	public void setStatus(int status) {
 		this.status = status;
+	}
+	public int getHitCount() {
+		return hitCount;
+	}
+	public void setHitCount(int hitCount) {
+		this.hitCount = hitCount;
 	}
 
 }

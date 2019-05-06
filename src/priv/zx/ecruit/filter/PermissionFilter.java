@@ -49,11 +49,13 @@ public class PermissionFilter implements Filter {
             //用户处于登录状态则可以直接进行访问
             if (flag!=null&&flag.equals("login_success")){
                 chain.doFilter(req, resp);
+              
+                return;
                 //登录失败,则跳转到登录界面
             }else {
                 chain.doFilter(req, resp);
-                /*RequestDispatcher rd=hreq.getRequestDispatcher("/index.jsp");
-                rd.forward(hreq,hresp);*/
+                //RequestDispatcher rd=hreq.getRequestDispatcher("/index.jsp");
+                //rd.forward(hreq,hresp);
             }
         }
     }

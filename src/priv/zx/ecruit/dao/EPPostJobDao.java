@@ -45,7 +45,7 @@ public class EPPostJobDao {
 		ptmt.close();
 		DBUtil.close(conn);
 	}
-	
+	//获取职位信息
 	public ArrayList<EPPostJob> getLatestEPPostJob()throws SQLException{
 	    Connection conn=DBUtil.getConnection();
 	    String sql="select tb_eppostjob.EPusername,EPname,jobname,jobsalary,jobdiploma from tb_eppostjob ,tb_epdata where jobcheck='1'and tb_eppostjob.EPusername=tb_epdata.EPusername order by postdate desc";
@@ -67,7 +67,72 @@ public class EPPostJobDao {
 	    
 	    return eppjs;
 	}
-	
+	//获取职位信息
+		public ArrayList<EPPostJob> getHotEPPostJob()throws SQLException
+		{
+		    Connection conn=DBUtil.getConnection();
+		    String sql="select tb_eppostjob.EPusername,EPname,jobname,jobsalary,jobdiploma from tb_eppostjob ,tb_epdata where jobcheck='1'and tb_eppostjob.EPusername=tb_epdata.EPusername order by hotCount desc";
+		    PreparedStatement ptmt=conn.prepareStatement(sql);
+		    ResultSet rs=ptmt.executeQuery();
+		    ArrayList<EPPostJob> eppjs=new ArrayList<EPPostJob>();
+		    while(rs.next()) {
+		        EPPostJob eppj=new EPPostJob();
+		        System.out.println(rs.getString("EPusername")+" "+rs.getString("EPname")+" "
+		                +rs.getString("jobname")+" "+rs.getString("jobsalary")+" "
+		                +rs.getString("jobdiploma"));
+		        eppj.setEPusername(rs.getString("EPusername"));
+		        eppj.setEPname(rs.getString("EPname"));
+		        eppj.setJobname(rs.getString("jobname"));
+		        eppj.setJobsalary(rs.getString("jobsalary"));
+		        eppj.setJobdiploma(rs.getString("jobdiploma"));
+		        eppjs.add(eppj);
+		    }
+		    
+		    return eppjs;
+		}
+		//getHitcount
+		public int getHitCount(String EPusername,String jobname)throws SQLException
+		{
+		    Connection conn=DBUtil.getConnection();
+		    int eppjs = 0;
+		    String sql="select hitCount from tb_eppostjob where tb_eppostjob.jobcheck='1' "
+		    		+ "and tb_eppostjob.EPusername='"+EPusername+"' and tb_eppostjob.jobname='"+jobname+"'";
+		   
+		    
+		    PreparedStatement ptmt=conn.prepareStatement(sql);
+		    ResultSet rs=ptmt.executeQuery(sql);
+		    while(rs.next()){
+		    	int eppj;
+		    	eppj=rs.getInt(1);
+		    	eppjs=eppj;
+		    }
+		   
+		    System.out.println(eppjs+"6666666");
+		    ptmt.execute();
+			ptmt.close();
+		    rs.close();
+			DBUtil.close(conn);
+			 return eppjs;
+		}
+		//upateCount
+		public void updateHitCount(String EPusername,String jobname)throws SQLException
+		{
+		    Connection conn=DBUtil.getConnection();
+		    int count=getHitCount(EPusername, jobname);
+		    count=count+1;
+		    String sql="update tb_eppostjob set  hitCount= ? "
+		    		+ "where tb_eppostjob.EPusername= ?  and tb_eppostjob.jobname=?";
+		   
+		    PreparedStatement ptmt=conn.prepareStatement(sql);
+		   ptmt.setInt(1, count);
+		   ptmt.setString(2, EPusername);
+		   ptmt.setString(3, jobname);
+		    System.out.println(count);		   
+		    ptmt.execute();
+			ptmt.close();
+			DBUtil.close(conn);
+		}
+		//huoqupostjob
 	public ArrayList<EPPostJob> getEPPostJob(String EPusername) throws SQLException{
 		Connection conn = DBUtil.getConnection();
 		String sql = "" +

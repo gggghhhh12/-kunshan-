@@ -3,6 +3,7 @@
 <%@page import="priv.zx.ecruit.model.News"%>
 <%@page import="priv.zx.ecruit.dao.NewsDao"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
     String path = request.getContextPath();
 			String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -204,15 +205,15 @@
 			<div class="search-wrapper">
 				<div class="search_box">
 					<form id="searchForm" class="searchForm clearfix" name="searchForm"
-						action="servlet/stuLoginServlet" method="get">
+						action="servlet/StuSearchJobByKeyWordServlet" method="post">
 						<input type="text" id="search_input" class="search_input"
-							tabindex="1" maxlength="64" autocomplete="off" value=""
-							placeholder="搜索职位、公司或地点" /> <input type="submit"
-							id="search_button" class="search_button" value="搜索" />
+							tabindex="1" maxlength="64" name="keyword" autocomplete="off" value=""
+							placeholder="搜索职位、公司或地点" />
+							 <input type="submit" id="search_button" class="search_button" value="搜索" />
 					</form>
 					<input type="hidden" id="search_py" value="" /> <input
 						type="hidden" id="isIndex" value="true" />
-				</div>
+		
 				<dl class="hotSearch">
 					<dt>热门搜索</dt>
 					<dd>
@@ -481,8 +482,8 @@
 
 			<div class="jobcom">
 				<ul class="job_tab">
-					<li><a class="hot_tab" id="hot_tab">热门职位</a></li>
-					<li><a class="new_tab" id="new_tab">最新职位</a></li>
+					<li><a class="hot_tab" id="hot_tab">最新职位</a></li>
+					<li><a class="new_tab" id="new_tab">热门职位</a></li>
 				</ul>
 				<div class="job_list_wrapper">
 					<div class="job_list1" style="display: block">
@@ -491,7 +492,7 @@
 								<li>
 								    <div class="position_list_li">
 								        <div class="position_li_top">
-								            <div class="position_name"><a href="servlet/StuJobDetail?EPusername=${EPPostJob.EPusername }&jobname=${EPPostJob.jobname}">${EPPostJob.jobname}</a></div>
+								            <div class="position_name"><a href="servlet/StuJobDetail?EPusername=${EPPostJob.EPusername }&jobname=${EPPostJob.jobname }" target="_blank">${EPPostJob.jobname}</a></div>
 								            <span class="salary">${EPPostJob.jobsalary}</span>
 								            <div class="position_info">${EPPostJob.jobdiploma}</div>
 								            <div class="labels">
@@ -512,7 +513,7 @@
 								    </div>
 								</li>
 							</c:forEach>
-						</ul>
+						</ul></div>
 						</div>
 
 					<div class="job_list2" style="display: block">

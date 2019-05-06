@@ -37,7 +37,6 @@ public class AdminAddNewsServlet extends HttpServlet {
 
 		response.setContentType("text/html");
 		response.setCharacterEncoding("utf-8");
-		request.setCharacterEncoding("utf-8");
 		
 		//获取json中的newsId,newsTitle,newsContent
 		String newsId = request.getParameter("newsId");

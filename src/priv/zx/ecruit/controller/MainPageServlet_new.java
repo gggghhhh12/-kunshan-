@@ -34,21 +34,10 @@ public class MainPageServlet_new extends HttpServlet {
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+    	request.setCharacterEncoding("utf-8");
         System.out.println("success");
         request.getSession().invalidate();
-        //网站展示的新闻列表
-        ArrayList<News> arrNews = new ArrayList<News>();
-
-        NewsDao nd = new NewsDao();
-        //从数据库中查询新闻列表
-        try {
-            arrNews = nd.queryNews();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        request.setAttribute("arrNews", arrNews);
-        
-        ArrayList<EPPostJob> eppjs=new ArrayList<EPPostJob>();
+       ArrayList<EPPostJob> eppjs=new ArrayList<EPPostJob>();
         //创建EPPostJobDao职位要求数据库操作对象
         EPPostJobDao eppjd = new EPPostJobDao();
         try {
@@ -60,6 +49,7 @@ public class MainPageServlet_new extends HttpServlet {
         }catch(Exception e) {
             e.printStackTrace();
         }
+        
         //将职位要求对象放入request中
         request.setAttribute("EPPostJobs", eppjs);
         request.getRequestDispatcher("../mainPage_new.jsp").forward(request, response);

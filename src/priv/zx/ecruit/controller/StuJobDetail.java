@@ -48,35 +48,40 @@ public class StuJobDetail extends HttpServlet {
 			return sb;
 		}
 		
-	/**
-	 * The doGet method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to get.
-	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
-	 */
+		/**
+		 * The doGet method of the servlet. <br>
+		 *
+		 * This method is called when a form has its tag value method equals to get.
+		 * 
+		 * @param request the request send by the client to the server
+		 * @param response the response send by the server to the client
+		 * @throws ServletException if an error occurred
+		 * @throws IOException if an error occurred
+		 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
+		request.setCharacterEncoding("utf-8");
 		request.setCharacterEncoding("utf-8");
 		//获得url中的EPusername信息
 		String EPusername = request.getParameter("EPusername");
 		String jobName=request.getParameter("jobname");
+		String jobName2=jobName;
 		jobName=jobName.replace(" ", "+");
 		System.out.print(EPusername+" "+jobName);
 		//创建EPDataDao和EPPostJobDao这两个数据库操作对象
 		EPDataDao epdd = new EPDataDao();
 		EPPostJobDao eppjd = new EPPostJobDao();
+		EPPostJobDao    eppjd6=new EPPostJobDao();
 		//创建EPData和EPPostJob对象
 		EPData epd = new EPData();
 		EPPostJob eppj = new EPPostJob();
 		//搜索对应企业账户名的企业信息
+		
 		try {
 			epd = epdd.getEPData(EPusername);
 			eppj = eppjd.getEPPostJob(EPusername,jobName);
+			eppjd6.updateHitCount(EPusername, jobName2);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -146,6 +151,7 @@ public class StuJobDetail extends HttpServlet {
 			}
 			request.setAttribute("recommends", arrRecommend);
 			request.setAttribute("strRecommends", arrRecommend.toString());
+			
 		}
 		
 		//显示该公司现有的评论
@@ -160,6 +166,7 @@ public class StuJobDetail extends HttpServlet {
 			request.setAttribute("comments", arrComm);
 		}
 		//转向stuJobDetile.jsp页面
+		
 		request.getRequestDispatcher("../stuJobDetail.jsp").forward(request, response);
 	} 
 
