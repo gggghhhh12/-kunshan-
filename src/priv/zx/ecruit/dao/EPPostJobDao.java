@@ -18,15 +18,15 @@ import priv.zx.ecruit.model.TradeAndCount;
  * 企业发布职位要求数据库操作Dao
  */
 public class EPPostJobDao {
-	
+	//发布新的职位
 	public void addEPPostJob(EPPostJob eppj) throws SQLException{
 		
 		Connection conn = DBUtil.getConnection();
 		String sql = "" +
 				"insert into tb_eppostjob " +
 				"(EPusername,jobname,jobsalary,jobdiploma,engrequest,reqnum,postdate, " +
-				"benefits,jobdescribe,jobduty,techrequest,jobkind,jobaddr) " +
-				"values(?,?,?,?,?,?,?,?,?,?,?,?,?) ";
+				"benefits,jobdescribe,jobduty,techrequest,jobkind,jobaddr, highSalary) " +
+				"values(?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
 		PreparedStatement ptmt = conn.prepareStatement(sql);
 		ptmt.setString(1, eppj.getEPusername());
 		ptmt.setString(2, eppj.getJobname());
@@ -41,6 +41,7 @@ public class EPPostJobDao {
 		ptmt.setString(11, eppj.getTechrequest());
 		ptmt.setString(12, eppj.getJobkind());
 		ptmt.setString(13, eppj.getJobaddr());
+		ptmt.setInt(14, eppj.gethighSalary());
 		ptmt.execute();
 		ptmt.close();
 		DBUtil.close(conn);
@@ -48,7 +49,8 @@ public class EPPostJobDao {
 	//获取职位信息
 	public ArrayList<EPPostJob> getLatestEPPostJob()throws SQLException{
 	    Connection conn=DBUtil.getConnection();
-	    String sql="select tb_eppostjob.EPusername,EPname,jobname,jobsalary,jobdiploma from tb_eppostjob ,tb_epdata where jobcheck='1'and tb_eppostjob.EPusername=tb_epdata.EPusername order by postdate desc";
+	    String sql="select tb_eppostjob.EPusername,EPname,jobname,jobsalary,jobdiploma from tb_eppostjob ,tb_epdata where jobcheck='1'and "
+	    		+ "tb_eppostjob.EPusername=tb_epdata.EPusername order by postdate desc";
 	    PreparedStatement ptmt=conn.prepareStatement(sql);
 	    ResultSet rs=ptmt.executeQuery();
 	    ArrayList<EPPostJob> eppjs=new ArrayList<EPPostJob>();
@@ -67,30 +69,7 @@ public class EPPostJobDao {
 	    
 	    return eppjs;
 	}
-	//获取职位信息
-		public ArrayList<EPPostJob> getHotEPPostJob()throws SQLException
-		{
-		    Connection conn=DBUtil.getConnection();
-		    String sql="select tb_eppostjob.EPusername,EPname,jobname,jobsalary,jobdiploma from tb_eppostjob ,tb_epdata where jobcheck='1'and tb_eppostjob.EPusername=tb_epdata.EPusername order by hotCount desc";
-		    PreparedStatement ptmt=conn.prepareStatement(sql);
-		    ResultSet rs=ptmt.executeQuery();
-		    ArrayList<EPPostJob> eppjs=new ArrayList<EPPostJob>();
-		    while(rs.next()) {
-		        EPPostJob eppj=new EPPostJob();
-		        System.out.println(rs.getString("EPusername")+" "+rs.getString("EPname")+" "
-		                +rs.getString("jobname")+" "+rs.getString("jobsalary")+" "
-		                +rs.getString("jobdiploma"));
-		        eppj.setEPusername(rs.getString("EPusername"));
-		        eppj.setEPname(rs.getString("EPname"));
-		        eppj.setJobname(rs.getString("jobname"));
-		        eppj.setJobsalary(rs.getString("jobsalary"));
-		        eppj.setJobdiploma(rs.getString("jobdiploma"));
-		        eppjs.add(eppj);
-		    }
-		    
-		    return eppjs;
-		}
-		//getHitcount
+		//获取点击次数来统计哪个职业更热门
 		public int getHitCount(String EPusername,String jobname)throws SQLException
 		{
 		    Connection conn=DBUtil.getConnection();
@@ -107,14 +86,14 @@ public class EPPostJobDao {
 		    	eppjs=eppj;
 		    }
 		   
-		    System.out.println(eppjs+"6666666");
+		    //System.out.println(eppjs+"6666666");
 		    ptmt.execute();
 			ptmt.close();
 		    rs.close();
 			DBUtil.close(conn);
 			 return eppjs;
 		}
-		//upateCount
+		//更新一下点击次数
 		public void updateHitCount(String EPusername,String jobname)throws SQLException
 		{
 		    Connection conn=DBUtil.getConnection();
@@ -127,12 +106,63 @@ public class EPPostJobDao {
 		   ptmt.setInt(1, count);
 		   ptmt.setString(2, EPusername);
 		   ptmt.setString(3, jobname);
-		    System.out.println(count);		   
+		    //System.out.println(count);		   
 		    ptmt.execute();
 			ptmt.close();
 			DBUtil.close(conn);
 		}
-		//huoqupostjob
+		
+		//获取热门职位信息
+				public ArrayList<EPPostJob> getHotEPPostJob()throws SQLException
+				{
+				    Connection conn=DBUtil.getConnection();
+				    String sql="select tb_eppostjob.EPusername,EPname,jobname,jobsalary,jobdiploma "
+				    		+ "from tb_eppostjob ,tb_epdata where jobcheck='1'and "
+				    		+ "tb_eppostjob.EPusername=tb_epdata.EPusername order by tb_eppostjob.hitCount desc";
+				    PreparedStatement ptmt=conn.prepareStatement(sql);
+				    ResultSet rs=ptmt.executeQuery();
+				    ArrayList<EPPostJob> eppjs=new ArrayList<EPPostJob>();
+				    while(rs.next()) {
+				        EPPostJob eppj=new EPPostJob();
+				       // System.out.println(rs.getString("EPusername")+" "+rs.getString("EPname")+" "
+				               // +rs.getString("jobname")+" "+rs.getString("jobsalary")+" "
+				               // +rs.getString("jobdiploma"));
+				        eppj.setEPusername(rs.getString("EPusername"));
+				        eppj.setEPname(rs.getString("EPname"));
+				        eppj.setJobname(rs.getString("jobname"));
+				        eppj.setJobsalary(rs.getString("jobsalary"));
+				        eppj.setJobdiploma(rs.getString("jobdiploma"));
+				        eppjs.add(eppj);
+				    }
+				    
+				    return eppjs;
+				}
+				//获取高薪职业
+				public ArrayList<EPPostJob> getHighSalaryJob()throws SQLException
+				{
+				    Connection conn=DBUtil.getConnection();
+				    String sql="select tb_eppostjob.EPusername,EPname,jobname,jobsalary,jobdiploma "
+				    		+ "from tb_eppostjob ,tb_epdata where jobcheck='1'and "
+				    		+ "tb_eppostjob.EPusername=tb_epdata.EPusername order by tb_eppostjob.highSalary desc";
+				    PreparedStatement ptmt=conn.prepareStatement(sql);
+				    ResultSet rs=ptmt.executeQuery();
+				    ArrayList<EPPostJob> eppjs=new ArrayList<EPPostJob>();
+				    while(rs.next()) {
+				        EPPostJob eppj=new EPPostJob();
+				       // System.out.println(rs.getString("EPusername")+" "+rs.getString("EPname")+" "
+				               // +rs.getString("jobname")+" "+rs.getString("jobsalary")+" "
+				               // +rs.getString("jobdiploma"));
+				        eppj.setEPusername(rs.getString("EPusername"));
+				        eppj.setEPname(rs.getString("EPname"));
+				        eppj.setJobname(rs.getString("jobname"));
+				        eppj.setJobsalary(rs.getString("jobsalary"));
+				        eppj.setJobdiploma(rs.getString("jobdiploma"));
+				        eppjs.add(eppj);
+				    }
+				    
+				    return eppjs;
+				}	
+		//获取job
 	public ArrayList<EPPostJob> getEPPostJob(String EPusername) throws SQLException{
 		Connection conn = DBUtil.getConnection();
 		String sql = "" +
@@ -270,7 +300,7 @@ public class EPPostJobDao {
 		String sql = "" +
 				"update tb_eppostjob " +
 				"set jobname = ?,jobsalary = ?,jobdiploma = ?,engrequest = ?,reqnum = ?,postdate = ?,benefits = ?, " +
-				"jobdescribe = ?,jobduty = ?,techrequest = ?,jobkind = ?,jobaddr = ?,jobcheck='0' " +
+				"jobdescribe = ?,jobduty = ?,techrequest = ?,jobkind = ?,jobaddr = ?, highSalary=?,jobcheck='0' " +
 				"where EPusername = ? and jobname=?";
 		PreparedStatement ptmt = conn.prepareStatement(sql);
 		ptmt.setString(1, eppj.getJobname());
@@ -285,8 +315,10 @@ public class EPPostJobDao {
 		ptmt.setString(10, eppj.getTechrequest());
 		ptmt.setString(11, eppj.getJobkind());
 		ptmt.setString(12, eppj.getJobaddr());
-		ptmt.setString(13, eppj.getEPusername());
-		ptmt.setString(14, eppj.getJobname());
+		ptmt.setInt(13, eppj.gethighSalary());
+		ptmt.setString(14, eppj.getEPusername());
+		ptmt.setString(15, eppj.getJobname());
+		
 		ptmt.execute();
 		ptmt.close();
 		DBUtil.close(conn);

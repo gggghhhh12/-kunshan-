@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import priv.zx.ecruit.dao.EPPostJobDao;
+import priv.zx.ecruit.db.gethighSalary;
 import priv.zx.ecruit.model.EPPostJob;
 
 public class EPHandleModifyPostJobServlet extends HttpServlet {
@@ -65,6 +66,9 @@ public class EPHandleModifyPostJobServlet extends HttpServlet {
 		String techrequest = request.getParameter("techrequest");
 		String jobkind = request.getParameter("jobkind");
 		String jobaddr = request.getParameter("jobaddr");
+		String jobsalary2=jobsalary;
+		gethighSalary gethighSalary1=new gethighSalary();
+		int highSalary=gethighSalary1.getHighJobSalary(jobsalary2);
 		//从session中获得企业用户名
 		HttpSession session = request.getSession();
 		String EPusername = (String) session.getAttribute("EPUser");
@@ -83,6 +87,7 @@ public class EPHandleModifyPostJobServlet extends HttpServlet {
 		eppj.setTechrequest(techrequest);
 		eppj.setJobkind(jobkind);
 		eppj.setJobaddr(jobaddr);
+		eppj.sethighSalary(highSalary);
 		//创建EPPostJobDao数据库操作对象,并更新数据项
 		try {
 			EPPostJobDao eppjd = new EPPostJobDao();

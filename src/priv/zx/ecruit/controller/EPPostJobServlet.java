@@ -3,6 +3,8 @@ package priv.zx.ecruit.controller;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import priv.zx.ecruit.dao.EPPostJobDao;
+import priv.zx.ecruit.db.gethighSalary;
 import priv.zx.ecruit.model.EPPostJob;
 
 public class EPPostJobServlet extends HttpServlet {
@@ -53,6 +56,9 @@ public class EPPostJobServlet extends HttpServlet {
 		//从职位发布表单中获取各项信息
 		String jobname = request.getParameter("jobname");
 		String jobsalary = request.getParameter("jobsalary");
+		String jobsalary2=jobsalary;
+		gethighSalary gethighSalary1=new gethighSalary();
+		int highSalary=gethighSalary1.getHighJobSalary(jobsalary2);
 		String jobdiploma = request.getParameter("jobdiploma");
 		String engrequest = request.getParameter("engrequest");
 		String reqnum = request.getParameter("reqnum");
@@ -86,6 +92,7 @@ public class EPPostJobServlet extends HttpServlet {
 		eppj.setTechrequest(techrequest);
 		eppj.setJobkind(jobkind);
 		eppj.setJobaddr(jobaddr);
+		eppj.sethighSalary(highSalary);
 		//创建EPPostJobDao对象，并将eppj对象添加进数据库
 		try {
 			EPPostJobDao eppjd = new EPPostJobDao();

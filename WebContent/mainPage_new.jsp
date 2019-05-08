@@ -482,21 +482,23 @@
 
 			<div class="jobcom">
 				<ul class="job_tab">
-					<li><a class="hot_tab" id="hot_tab">最新职位</a></li>
+				<li><a class="hot_tab" id="hot_tab">最新职位</a></li>
 					<li><a class="new_tab" id="new_tab">热门职位</a></li>
+				
 				</ul>
+				<!-- 最新职位 -->
 				<div class="job_list_wrapper">
 					<div class="job_list1" style="display: block">
 						<ul class="position_list_ul">
-							<c:forEach var="EPPostJob" items="${EPPostJobs}" begin="1" end="6">
+							<c:forEach var="newJob" items="${newJobs }" begin="0" end="5">
 								<li>
 								    <div class="position_list_li">
 								        <div class="position_li_top">
-								            <div class="position_name"><a href="servlet/StuJobDetail?EPusername=${EPPostJob.EPusername }&jobname=${EPPostJob.jobname }" target="_blank">${EPPostJob.jobname}</a></div>
-								            <span class="salary">${EPPostJob.jobsalary}</span>
-								            <div class="position_info">${EPPostJob.jobdiploma}</div>
+								            <div class="position_name"><a href="javascript:location.href=encodeURI('servlet/StuJobDetail?EPusername=${newJob.EPusername }&jobname=${newJob.jobname }')"  target="_blank">${newJob.jobname}</a></div>
+								            <span class="salary">${newJob.jobsalary}</span>
+								            <div class="position_info">${newJob.jobdiploma}</div>
 								            <div class="labels">
-								                <c:forEach var="wordCut" items="${EPPostJob.benefits}">
+								                <c:forEach var="wordCut" items="${newJob.benefits}">
 								                    <span class="wordCut">${wordCut}</span>
 								                </c:forEach>
 								            </div>
@@ -505,7 +507,7 @@
 								        <div class="position_li_bottom">
 								            <img src="./images/boshi.png" width="50px" height="50px">
 								            <div>
-								                <div class="company_name">${EPPostJob.EPname }</div>
+								                <div class="company_name">${newJob.EPname }</div>
 								                <div class="company_wordcut"></div>
 								            </div>
 								        
@@ -515,111 +517,34 @@
 							</c:forEach>
 						</ul></div>
 						</div>
-
+<!-- 热门职位 -->
 					<div class="job_list2" style="display: block">
 						<ul class="position_list_ul">
-							<li class="position_list_li">
-								<div class="position_li_top">
-									<div class="position_name">电气工程师</div>
-									<span class="salary"> 4.5k-8k </span>
-									<div class="position_info">本科</div>
-									<div class="labels">
-										<span class="wordCut">工业自动化</span> <span class="wordCut">电气自动化</span>
-									</div>
-								</div>
-								<div class="position_li_bottom">
-									<img src="./images/wenhong.png" width="50" height="50">
-									<div class="bottom_right">
-										<div class="company_name">江苏省文洪机械股份有限公司</div>
-										<div class="company_wordcut">全自动平压平模切机、全自动平压平烫金机、江苏</div>
-									</div>
-								</div>
-							</li>
-							<li class="position_list_li">
-								<div class="position_li_top">
-									<div class="position_name">电气工程师</div>
-									<span class="salary"> 10k-12k </span>
-									<div class="position_info">硕士</div>
-									<div class="labels">
-										<span class="wordCut">电气工程</span> <span class="wordCut">自动化</span>
-									</div>
-								</div>
-								<div class="position_li_bottom">
-									<img src="./images/jixing.png" width="50" height="50">
-									<div class="bottom_right">
-										<div class="company_name">江苏吉星新材料有限公司</div>
-										<div class="company_wordcut">蓝宝石晶体生长、晶体加工、江苏</div>
-									</div>
-								</div>
-							</li>
-							<li class="position_list_li">
-								<div class="position_li_top">
-									<div class="position_name">产品设计</div>
-									<span class="salary"> 薪资面议 </span>
-									<div class="position_info">本科</div>
-									<div class="labels">
-										<span class="wordCut">电气工程自动化</span> <span class="wordCut">机械设计制造及自动化</span>
-									</div>
-								</div>
-								<div class="position_li_bottom">
-									<img src="./images/zhenjiang.png" width="50" height="50">
-									<div class="bottom_right">
-										<div class="company_name">江苏省镇江船厂（集团）有限公司</div>
-										<div class="company_wordcut">三维设计、精度造船、智能焊接、江苏</div>
-									</div>
-								</div>
-							</li>
-							<li class="position_list_li">
-								<div class="position_li_top">
-									<div class="position_name">电气工程师</div>
-									<span class="salary"> 4.4k-10k </span>
-									<div class="position_info">本科</div>
-									<div class="labels">
-										<span class="wordCut">电气自动化</span> <span class="wordCut">机电一体化</span>
-									</div>
-								</div>
-								<div class="position_li_bottom">
-									<img src="./images/gongdajiqiren.png" width="50" height="50">
-									<div class="bottom_right">
-										<div class="company_name">工大机器人集团泰州智能制造研究院</div>
-										<div class="company_wordcut">智能制造、创新研究</div>
-									</div>
-								</div>
-							</li>
-							<li class="position_list_li">
-								<div class="position_li_top">
-									<div class="position_name">产品研发</div>
-									<span class="salary"> 6k以上 </span>
-									<div class="position_info">本科</div>
-									<div class="labels">
-										<span class="wordCut">机械设计制造及其自动化</span> <span class="wordCut">电气工程及其自动化</span>
-									</div>
-								</div>
-								<div class="position_li_bottom">
-									<img src="./images/shanbo.png" width="50" height="50">
-									<div class="bottom_right">
-										<div class="company_name">山东山博机电集团有限公司</div>
-										<div class="company_wordcut">微电机厂、仪器仪表、山东</div>
-									</div>
-								</div>
-							</li>
-							<li class="position_list_li">
-								<div class="position_li_top">
-									<div class="position_name">产品工程师</div>
-									<span class="salary"> 2.8k-3.5k </span>
-									<div class="position_info">本科</div>
-									<div class="labels">
-										<span class="wordCut">机械专业</span> <span class="wordCut">机械制造</span>
-									</div>
-								</div>
-								<div class="position_li_bottom">
-									<img src="./images/jianxin.png" width="50" height="50">
-									<div class="bottom_right">
-										<div class="company_name">宁波建新华谊铝业有限公司</div>
-										<div class="company_wordcut">高新科技、宁波</div>
-									</div>
-								</div>
-							</li>
+							<c:forEach var="hotJob" items="${hotJobs}" begin="0" end="5">
+								<li>
+								    <div class="position_list_li">
+								        <div class="position_li_top">
+								            <div class="position_name"><a href="servlet/StuJobDetail?EPusername=${hotJob.EPusername }&jobname=${hotJob.jobname }" target="_blank">${hotJob.jobname}</a></div>
+								            <span class="salary">${hotJob.jobsalary}</span>
+								            <div class="position_info">${hotJob.jobdiploma}</div>
+								            <div class="labels">
+								                <c:forEach var="wordCut" items="${hotJob.benefits}">
+								                    <span class="wordCut">${wordCut}</span>
+								                </c:forEach>
+								            </div>
+								            <div></div>
+								        </div>
+								        <div class="position_li_bottom">
+								            <img src="./images/boshi.png" width="50px" height="50px">
+								            <div>
+								                <div class="company_name">${hotJob.EPname }</div>
+								                <div class="company_wordcut"></div>
+								            </div>
+								        
+								        </div>
+								    </div>
+								</li>
+							</c:forEach>
 						</ul>
 					</div>
 				</div>
@@ -629,62 +554,35 @@
 				<ul class="job_tab">
 					<li><a class="high-job">高端职位</a></li>
 				</ul>
+<!-- 高端职位 -->
 				<div class="job_list_wrapper">
 					<div class="job_list" style="display: block">
 						<ul class="position_list_ul">
-							<li class="position_list_li">
-								<div class="position_li_top">
-									<div class="position_name">机械工程师</div>
-									<span class="salary"> 4k-6k </span>
-									<div class="position_info">本科及以上</div>
-									<div class="labels">
-										<span class="wordCut">机械设计</span> <span class="wordCut">自动化电气</span>
-
-									</div>
-								</div>
-								<div class="position_li_bottom">
-									<img src="./images/boshi.png" width="50" height="50">
-									<div class="bottom_right">
-										<div class="company_name">哈尔滨博实自动化股份有限公司</div>
-										<div class="company_wordcut">化工、冶金、金属加工、哈尔滨</div>
-									</div>
-								</div>
-							</li>
-							<li class="position_list_li">
-								<div class="position_li_top">
-									<div class="position_name">研发人员</div>
-									<span class="salary"> 5k-6k </span>
-									<div class="position_info">本科/硕士</div>
-									<div class="labels">
-										<span class="wordCut">机械工程</span> <span class="wordCut">电子</span>
-									</div>
-								</div>
-								<div class="position_li_bottom">
-									<img src="./images/bingqi.png" width="50" height="50">
-									<div class="bottom_right">
-										<div class="company_name">中国兵器工业集团有限公司</div>
-										<div class="company_wordcut">工程机械产品</div>
-									</div>
-								</div>
-							</li>
-							<li class="position_list_li">
-								<div class="position_li_top">
-									<div class="position_name">电气工程师</div>
-									<span class="salary"> 10k-12k </span>
-									<div class="position_info">硕士</div>
-									<div class="labels">
-										<span class="wordCut">电气工程</span> <span class="wordCut">自动化</span>
-									</div>
-								</div>
-								<div class="position_li_bottom">
-									<img src="./images/jixing.png" width="50" height="50">
-									<div class="bottom_right">
-										<div class="company_name">江苏吉星新材料有限公司</div>
-										<div class="company_wordcut">蓝宝石晶体生长、晶体加工、江苏</div>
-									</div>
-								</div>
-							</li>
-
+							<c:forEach var="highSalary" items="${highSalarys}" begin="0" end="2">
+								<li>
+								    <div class="position_list_li">
+								        <div class="position_li_top">
+								            <div class="position_name"><a href="servlet/StuJobDetail?EPusername=${highSalary.EPusername }&jobname=${highSalary.jobname }" target="_blank">${highSalary.jobname}</a></div>
+								            <span class="salary">${highSalary.jobsalary}</span>
+								            <div class="position_info">${highSalary.jobdiploma}</div>
+								            <div class="labels">
+								                <c:forEach var="wordCut" items="${highSalary.benefits}">
+								                    <span class="wordCut">${wordCut}</span>
+								                </c:forEach>
+								            </div>
+								            <div></div>
+								        </div>
+								        <div class="position_li_bottom">
+								            <img src="./images/boshi.png" width="50px" height="50px">
+								            <div>
+								                <div class="company_name">${highSalary.EPname }</div>
+								                <div class="company_wordcut"></div>
+								            </div>
+								        
+								        </div>
+								    </div>
+								</li>
+							</c:forEach>
 						</ul>
 					</div>
 				</div>
@@ -697,151 +595,26 @@
 				<div class="company_list_wrapper">
 					<div class="company_list">
 						<ul class="company_list_ul">
+						<c:forEach var="vipEp" items="${vipEps}" begin="0" end="5">
 							<li class="company_list_li">
+								
 								<div class="top">
 									<a> <img src="./images/ande.png" alt="公司Logo" width="80"
 										height="80">
 									</a>
-									<p class="company_name">北京安德建奇数字设备股份有限公司</p>
+									<p class="company_name">${vipEp.EPname }</p>
 									<p>
-										<span> 数字控制精密电加工/100人 </span>
+										<span>${vipEp.EPnature } </span>
 									</p>
 									<p class="advantage">
-										有德有才，破格使用；有德少才，培养使用；少德有才，限制使用；无德无才，坚决不用</p>
+										${vipEp.EPintroduction }</p>
 								</div>
 								<div class="bottom">
-									<p class="green">5个</p>
-									<p>在招职位</p>
+									<!--  <p class="green">5个</p>-->
+									<p>${vipEp.count }</p>
 								</div>
 							</li>
-							<li class="company_list_li">
-								<div class="top">
-									<a> <img src="./images/zhongneng.png" alt="公司Logo"
-										width="80" height="80">
-									</a>
-									<p class="company_name">黑龙江省中能控制工程股份有限公司</p>
-									<p>
-										<span> 供热设备、信息系统集成及服务/150-500人 </span>
-									</p>
-									<p class="advantage">艰苦奋斗、积极乐观、公开透明、互利互赢</p>
-								</div>
-								<div class="bottom">
-									<p class="green">8个</p>
-									<p>在招职位</p>
-								</div>
-							</li>
-							<li class="company_list_li">
-								<div class="top">
-									<a> <img src="./images/pingyang.png" alt="公司Logo"
-										width="80" height="80">
-									</a>
-									<p class="company_name">山西平阳重工机械有限责任公司</p>
-									<p>
-										<span> 现代化军工企业、高端煤机生产企业 </span>
-									</p>
-									<p class="advantage">继往开来，承古求新，走出困境，再创辉煌</p>
-								</div>
-								<div class="bottom">
-									<p class="green">6个</p>
-									<p>在招职位</p>
-								</div>
-							</li>
-							<li class="company_list_li">
-								<div class="top">
-									<a> <img src="./images/zhenhiangdongfang.png" alt="公司Logo"
-										width="80" height="80">
-									</a>
-									<p class="company_name">镇江东方电热有限公司 江苏瑞吉泰油气工程有限公司</p>
-									<p>
-										<span> 高性能电加热器、家用电器/1000-1500人 </span>
-									</p>
-									<p class="advantage">以质量求生存，以创新求效益，以诚信求发展</p>
-								</div>
-								<div class="bottom">
-									<p class="green">5个</p>
-									<p>在招职位</p>
-								</div>
-							</li>
-							<li class="company_list_li">
-								<div class="top">
-									<a> <img src="./images/bingqi.png" alt="公司Logo" width="80"
-										height="80">
-									</a>
-									<p class="company_name">中国兵器工业集团有限公司 哈尔滨第一机械集团有限公司</p>
-									<p>
-										<span> 兵器工业/2000人 </span>
-									</p>
-									<p class="advantage">用户第一、质量至上、满意服务、诚信为本</p>
-								</div>
-								<div class="bottom">
-									<p class="green">14个</p>
-									<p>在招职位</p>
-								</div>
-							</li>
-							<li class="company_list_li">
-								<div class="top">
-									<a> <img src="./images/boshi.png" alt="公司Logo" width="80"
-										height="80">
-									</a>
-									<p class="company_name">哈尔滨博实自动化股份有限公司</p>
-									<p>
-										<span> 化工、冶金、金属加工/1000人 </span>
-									</p>
-									<p class="advantage">2014年荣登“福布斯中国上市潜力企业“100强</p>
-								</div>
-								<div class="bottom">
-									<p class="green">18个</p>
-									<p>在招职位</p>
-								</div>
-							</li>
-							<li class="company_list_li">
-								<div class="top">
-									<a> <img src="./images/hangtiankeji.png" alt="公司Logo"
-										width="80" height="80">
-									</a>
-									<p class="company_name">航天科技控股集团股份有限公司哈尔滨公司</p>
-									<p>
-										<span> 拥有航天背景汽车电子企业/上市公司/500-1000人 </span>
-									</p>
-									<p class="advantage">成为世界一流的创新型汽车电子企业</p>
-								</div>
-								<div class="bottom">
-									<p class="green">6个</p>
-									<p>在招职位</p>
-								</div>
-							</li>
-							<li class="company_list_li">
-								<div class="top">
-									<a> <img src="./images/shengliyoutian.png" alt="公司Logo"
-										width="80" height="80">
-									</a>
-									<p class="company_name">胜利油田胜利石油装备有限公司</p>
-									<p>
-										<span> 集设计、研发、加工制造、油田服务于一体/1000-5000人 </span>
-									</p>
-									<p class="advantage">取得质量体系、环境管理体系和职业健康安全体系认证证书</p>
-								</div>
-								<div class="bottom">
-									<p class="green">25个</p>
-									<p>在招职位</p>
-								</div>
-							</li>
-							<li class="company_list_li">
-								<div class="top">
-									<a> <img src="./images/jianxin.png" alt="公司Logo"
-										width="80" height="80">
-									</a>
-									<p class="company_name">宁波建新华谊铝业有限公司</p>
-									<p>
-										<span> 高新技术企业/100-500人 </span>
-									</p>
-									<p class="advantage">惠及员工、利于天下</p>
-								</div>
-								<div class="bottom">
-									<p class="green">5个</p>
-									<p>在招职位</p>
-								</div>
-							</li>
+							</c:forEach>
 						</ul>
 					</div>
 				</div>
@@ -932,8 +705,8 @@
 					</div>
 					<div class="footer_business">
 						<p class="footer_title">关于我们</p>
-						<span class="tel">服务热线：0451 8626 6861 (8:30 -17:30)</span> <a
-							class="tel">企业服务邮箱：hitzhineng@163.com</span>
+						<span class="tel">服务热线：0451 8626 6861 (8:30 -17:30)</span> 
+						<span class="tel">企业服务邮箱：hitzhineng@163.com</span>
 					</div>
 				</div>
 			</div>

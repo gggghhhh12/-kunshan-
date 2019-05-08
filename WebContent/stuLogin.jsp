@@ -57,7 +57,6 @@ file="./css/mainPage.css"%>
 						<li><a href="stuLogin.jsp">毕业生登录</a></li>
 						<li><a href="EPLogin.jsp">企业登录</a></li>
 						<li><a href="adminLogin.jsp">管理员登录</a></li>
-						<li><a href="BrowseLogin.jsp">浏览登录</a></li>
 					</ul></li>
 			</ul>
 		</nav>

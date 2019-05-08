@@ -10,6 +10,14 @@
     <url-pattern>/imageServlet</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>MainPageStuHomeServlet</servlet-name>
+    <servlet-class>priv.zx.ecruit.controller.MainPageStuHomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MainPageStuHomeServlet</servlet-name>
+    <url-pattern>/servlet/MainPageStuHomeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>AdminPerssionServlet</servlet-name>
     <servlet-class>priv.zx.ecruit.controller.AdminPerssionServlet</servlet-class>
   </servlet>
