@@ -9,6 +9,7 @@ public class EPPostJob {
 
 	private String EPusername;//公司账户名，主键
 	private String EPname;//公司名称
+	private String EPlogo;//公司logo图片名字
 	public String getEPname() {
         return EPname;
     }
@@ -119,5 +120,11 @@ public class EPPostJob {
 	public void setHitCount(int hitCount) {
 		this.hitCount = hitCount;
 	}
+    public String getEPlogo() {
+        return EPlogo;
+    }
+    public void setEPlogo(String ePlogo) {
+        EPlogo = ePlogo;
+    }
 
 }

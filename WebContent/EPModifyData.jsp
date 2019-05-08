@@ -79,7 +79,7 @@ file="./css/stuResume.css"%>
 			<div class="basicinfo">
 				<h4>公司资料</h4>
 				<hr>
-				<form action="servlet/EPHandleModifyData" method="post">
+				<form action="servlet/EPHandleModifyData" method="post" enctype="multipart/form-data">
 					<dl>
 						<dt>公司名称</dt>
 						<dd>
@@ -185,6 +185,14 @@ file="./css/stuResume.css"%>
 								style="width: 300px; height: 100px">${EPData.EPintroduction }</textarea>
 						</dd>
 					</dl>
+					<dl>
+                    <dt>企业logo:</dt>
+                    <dd><img src="/picupload/${EPData.EPlogo}" width=100px height=100px></dd>
+                    
+                    <dd>更新企业logo:</dd>
+                    <dd><input type="file" name="EPlogo"></dd>
+                    </dl>
+                    
 					<div class="button">
 						<input type="submit" value="提交">
 					</div>

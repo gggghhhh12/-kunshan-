@@ -503,7 +503,7 @@
 								            <div></div>
 								        </div>
 								        <div class="position_li_bottom">
-								            <img src="./images/boshi.png" width="50px" height="50px">
+								            <img src="/picupload/${EPPostJob.EPlogo}" width="50px" height="50px">
 								            <div>
 								                <div class="company_name">${EPPostJob.EPname }</div>
 								                <div class="company_wordcut"></div>

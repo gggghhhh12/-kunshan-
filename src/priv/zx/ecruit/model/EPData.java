@@ -18,6 +18,7 @@ public class EPData {
 	private String EPmobile;//联系人移动电话
 	private String EPpostalcode;//公司邮政编码
 	private String EPintroduction;//公司简介
+	private String EPlogo;//公司的logo图片文件名字
 	
 	public String getEPusername() {
 		return EPusername;
@@ -97,5 +98,11 @@ public class EPData {
 	public void setEPintroduction(String ePintroduction) {
 		EPintroduction = ePintroduction;
 	}
+    public String getEPlogo() {
+        return EPlogo;
+    }
+    public void setEPlogo(String ePlogo) {
+        EPlogo = ePlogo;
+    }
 	
 }

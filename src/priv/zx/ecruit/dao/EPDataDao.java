@@ -20,9 +20,9 @@ public class EPDataDao {
 		Connection conn = DBUtil.getConnection();
 		String sql = "" +
 				"insert into tb_epdata " +
-				"(EPusername,EPname,EPnature,EPcode,EPtrade,EPscale,EPaddr,EPcontact,EPemail,EPtel,EPmobile,EPpostalcode,EPintroduction) " +
+				"(EPusername,EPname,EPnature,EPcode,EPtrade,EPscale,EPaddr,EPcontact,EPemail,EPtel,EPmobile,EPpostalcode,EPintroduction,EPlogo) " +
 				"values( " +
-				"?,?,?,?,?,?,?,?,?,?,?,?,?) ";
+				"?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
 		PreparedStatement ptmt = conn.prepareStatement(sql);
 		ptmt.setString(1, epd.getEPusername());
 		ptmt.setString(2, epd.getEPname());
@@ -37,6 +37,7 @@ public class EPDataDao {
 		ptmt.setString(11, epd.getEPmobile());
 		ptmt.setString(12, epd.getEPpostalcode());
 		ptmt.setString(13, epd.getEPintroduction());
+		ptmt.setString(14,epd.getEPlogo());
 		ptmt.execute();
 		ptmt.close();
 		DBUtil.close(conn);
@@ -66,6 +67,7 @@ public class EPDataDao {
 			epd.setEPmobile(rs.getString("EPmobile"));
 			epd.setEPpostalcode(rs.getString("EPpostalcode"));
 			epd.setEPintroduction(rs.getString("EPintroduction"));
+			epd.setEPlogo(rs.getString("EPlogo"));
 		}
 		rs.close();
 		ptmt.close();
@@ -78,7 +80,7 @@ public class EPDataDao {
 		String sql = "" +
 				"update tb_epdata " +
 				"set EPname = ?,EPnature = ?,EPcode = ?, EPtrade = ?, " +
-				"EPscale = ?,EPaddr = ?,EPcontact = ?,EPemail = ?,EPtel = ?,EPmobile = ?, EPpostalcode = ?,EPintroduction = ? " +
+				"EPscale = ?,EPaddr = ?,EPcontact = ?,EPemail = ?,EPtel = ?,EPmobile = ?, EPpostalcode = ?,EPintroduction = ? ,EPlogo=?" +
 				"where EPusername = ? ";
 		PreparedStatement ptmt = conn.prepareStatement(sql);
 		ptmt.setString(1, epd.getEPname());
@@ -93,7 +95,8 @@ public class EPDataDao {
 		ptmt.setString(10, epd.getEPmobile());
 		ptmt.setString(11, epd.getEPpostalcode());
 		ptmt.setString(12, epd.getEPintroduction());
-		ptmt.setString(13, epd.getEPusername());
+		ptmt.setString(14, epd.getEPusername());
+		ptmt.setString(13, epd.getEPlogo());
 		ptmt.execute();
 		ptmt.close();
 		DBUtil.close(conn);

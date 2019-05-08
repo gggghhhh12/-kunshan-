@@ -94,6 +94,11 @@ file="./css/stuResume.css"%>
 					<dt class="top">公司简介:</dt>
 					<dd>${introduction }</dd>
 				</dl>
+				<dl>
+				    <dt>企业logo:</dt>
+				    <dd><img src="/picupload/${EPData.EPlogo}" width=100px height=100px></dd>
+				</dl>
+				
 			</div>
 		</div>
 	</div>

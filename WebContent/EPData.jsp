@@ -77,7 +77,7 @@ file="./css/stuResume.css"%>
 			<div class="basicinfo">
 				<h4>公司资料</h4>
 				<hr>
-				<form action="servlet/EPDataServlet" method="post">
+				<form action="servlet/EPDataServlet" method="post" enctype="multipart/form-data">
 					<dl>
 						<dt>公司名称</dt>
 						<dd>
@@ -171,11 +171,14 @@ file="./css/stuResume.css"%>
 								style="width: 300px; height: 100px" placeholder="不超过500字"></textarea>
 						</dd>
 					</dl>
+					上传企业logo:
+					<input type="file" name="EPlogo">
 					<div class="button">
 						<input style="cursor: pointer" type="submit" value="提交">
 					</div>
+					
 				</form>
-				<form action="upload"></form>
+				
 			</div>
 		</div>
 	</div>

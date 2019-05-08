@@ -41,7 +41,7 @@ public class MainPageServlet_new extends HttpServlet {
         //创建EPPostJobDao职位要求数据库操作对象
         EPPostJobDao eppjd = new EPPostJobDao();
         try {
-            System.out.println("shabi");
+            //System.out.println("shabi");
             eppjs=eppjd.getLatestEPPostJob();
             for(EPPostJob i:eppjs) {
                 System.out.println(i.getEPname());
