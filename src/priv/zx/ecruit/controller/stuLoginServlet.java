@@ -74,7 +74,7 @@ public class stuLoginServlet extends HttpServlet {
 				session.setAttribute("flag", "login_success");
 				out.println(1);
 				//页面转向登录后界面
-				request.getRequestDispatcher("StuHomeServlet").forward(request, response);
+				request.getRequestDispatcher("MainPageStuHomeServlet").forward(request, response);
 				
 			}else if(!checkcode.toLowerCase().equals(verificationCode.toLowerCase())&&ischecked&&password != null && password.equals(DbPassword)){
 				

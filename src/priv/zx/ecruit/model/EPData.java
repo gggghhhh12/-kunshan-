@@ -18,6 +18,7 @@ public class EPData {
 	private String EPmobile;//联系人移动电话
 	private String EPpostalcode;//公司邮政编码
 	private String EPintroduction;//公司简介
+
 	private String EPlogo;//公司的logo图片文件名字
 	
 	public String getEPusername() {
@@ -104,5 +105,15 @@ public class EPData {
     public void setEPlogo(String ePlogo) {
         EPlogo = ePlogo;
     }
+
+	private int jobcount;//公司发布的职位数量
+	
+	public int getcount() {
+		return jobcount;
+	}
+	public void setcount(int count) {
+	 jobcount = count;
+	}
+
 	
 }

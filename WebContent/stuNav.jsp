@@ -20,7 +20,7 @@
 	<nav id="wrap">
 		<div class="logo">网络招聘系统</div>
 		<ul>
-			<li><a href="servlet/StuHomeServlet">首页</a></li>
+			<li><a href="servlet/MainPageServlet_new">首页</a></li>
 			<li><a>简历管理</a>
 				<ul>
 					<li class="add"><a href="basicinfo.jsp">填写简历</a></li>
@@ -33,7 +33,7 @@
 		</ul>
 		<div class="user">
 			<ul>
-				<li><a href="servlet/MainPageServlet">退出</a></li>
+				<li><a href="servlet/MainPageServlet_new">退出</a></li>
 			</ul>
 		</div>
 		<div class="keyword">

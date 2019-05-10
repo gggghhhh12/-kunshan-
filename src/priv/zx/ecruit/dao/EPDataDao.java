@@ -11,6 +11,7 @@ import java.util.HashMap;
 import priv.zx.ecruit.db.DBUtil;
 import priv.zx.ecruit.model.EPData;
 
+
 /**
  * 公司资料数据操作Dao
  */
@@ -96,11 +97,43 @@ public class EPDataDao {
 		ptmt.setString(11, epd.getEPpostalcode());
 		ptmt.setString(12, epd.getEPintroduction());
 		ptmt.setString(14, epd.getEPusername());
-		ptmt.setString(13, epd.getEPlogo());
-		ptmt.execute();
+		ptmt.setString(13, epd.getEPlogo());}
+
+	
+	
+	//获取高端职位
+	public ArrayList<EPData>getVipEPData() throws SQLException{
+		Connection conn = DBUtil.getConnection();
+		String sql2="";
+		String sql = "" +
+				"select tb_epdata.Epname, tb_epdata.EPnature,tb_epdata.Epintroduction,"
+				+"count(tb_eppostjob.EPusername)"
+				 +" from tb_epdata ,tb_eppostjob, tb_epuser "
+				+" where  tb_epdata.EPusername =tb_eppostjob.EPusername and tb_eppostjob.EPusername=tb_epuser.EPusername  "
+				+" and tb_epuser.EPlevel='1' group by tb_epdata.EPusername";
+		PreparedStatement ptmt = conn.prepareStatement(sql);
+		
+		ResultSet rs = ptmt.executeQuery();
+		 ArrayList<EPData> epd =new  ArrayList<EPData>();
+		while(rs.next()){
+			EPData epd2 = null;
+			epd2 = new EPData();
+			System.out.print(rs.getString(1)+rs.getString(2)+rs.getString(3)+"HHH");
+			
+			System.out.println(rs.getInt(4));
+			epd2.setEPname(rs.getString("EPname"));
+			epd2.setEPnature(rs.getString("EPnature"));
+			epd2.setEPintroduction(rs.getString("EPintroduction"));
+			epd2.setcount(rs.getInt(4));
+			epd.add(epd2);
+		}
+		rs.close();
 		ptmt.close();
 		DBUtil.close(conn);
+		return epd;
 	}
+	
+	
 	
 	//根据关键字搜索公司
 	public ArrayList<String> queryEPusesnames(String keyword) throws SQLException{
