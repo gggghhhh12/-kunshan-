@@ -92,7 +92,7 @@ public class MainPageStuHomeServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		//×ªÏòstuHome.jspÒ³Ãæ
-		request.getRequestDispatcher("../NewFile1.jsp").forward(request, response);
+		request.getRequestDispatcher("../stuHome.jsp").forward(request, response);
 		
 	}
 
